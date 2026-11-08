@@ -1,0 +1,316 @@
+{
+  "protocol_id": "national_pm25_ood_split_v1",
+  "protocol_fingerprint_sha256": "8df9b31e9842a454c896b60abccb5012a96f389f1bc4685b2a67ab53812ba9aa",
+  "assignment_fingerprint_sha256": "5bf583dbb419d8f48d03f611f6775d3503521d35401d224083d939e488838c14",
+  "fold": 0,
+  "train_cities": [
+    "Beijing",
+    "Tianjin",
+    "Handan",
+    "Baoding",
+    "Tangshan",
+    "Cangzhou",
+    "Zhengzhou",
+    "Jinan",
+    "Jiamusi",
+    "Shenyang",
+    "Mudanjiang",
+    "Harbin",
+    "Qiqihar",
+    "Anshan",
+    "Changchun",
+    "Jilin_City",
+    "Dazhou",
+    "Yibin",
+    "Nanchong",
+    "Luzhou",
+    "Chongqing",
+    "Neijiang",
+    "Deyang",
+    "Leshan",
+    "Guangzhou",
+    "Qingyuan",
+    "Zhaoqing",
+    "Shenzhen",
+    "Maoming",
+    "Fuzhou",
+    "Quanzhou",
+    "Shaoguan",
+    "Hangzhou",
+    "Nanjing",
+    "Nantong",
+    "Yancheng",
+    "Wenzhou",
+    "Shanghai",
+    "Xuzhou",
+    "Hefei"
+  ],
+  "validation_cities": [
+    "Shijiazhuang",
+    "Daqing",
+    "Mianyang",
+    "Huizhou",
+    "Ningbo"
+  ],
+  "test_cities": [
+    "Dezhou",
+    "Dalian",
+    "Chengdu",
+    "Yangjiang",
+    "Jinhua"
+  ],
+  "cities_by_region": {
+    "train": {
+      "North_China_Plain": [
+        "Beijing",
+        "Tianjin",
+        "Handan",
+        "Baoding",
+        "Tangshan",
+        "Cangzhou",
+        "Zhengzhou",
+        "Jinan"
+      ],
+      "Northeast": [
+        "Jiamusi",
+        "Shenyang",
+        "Mudanjiang",
+        "Harbin",
+        "Qiqihar",
+        "Anshan",
+        "Changchun",
+        "Jilin_City"
+      ],
+      "Sichuan_Basin": [
+        "Dazhou",
+        "Yibin",
+        "Nanchong",
+        "Luzhou",
+        "Chongqing",
+        "Neijiang",
+        "Deyang",
+        "Leshan"
+      ],
+      "South_China": [
+        "Guangzhou",
+        "Qingyuan",
+        "Zhaoqing",
+        "Shenzhen",
+        "Maoming",
+        "Fuzhou",
+        "Quanzhou",
+        "Shaoguan"
+      ],
+      "Yangtze_River_Delta_Extended": [
+        "Hangzhou",
+        "Nanjing",
+        "Nantong",
+        "Yancheng",
+        "Wenzhou",
+        "Shanghai",
+        "Xuzhou",
+        "Hefei"
+      ]
+    },
+    "validation": {
+      "North_China_Plain": [
+        "Shijiazhuang"
+      ],
+      "Northeast": [
+        "Daqing"
+      ],
+      "Sichuan_Basin": [
+        "Mianyang"
+      ],
+      "South_China": [
+        "Huizhou"
+      ],
+      "Yangtze_River_Delta_Extended": [
+        "Ningbo"
+      ]
+    },
+    "test": {
+      "North_China_Plain": [
+        "Dezhou"
+      ],
+      "Northeast": [
+        "Dalian"
+      ],
+      "Sichuan_Basin": [
+        "Chengdu"
+      ],
+      "South_China": [
+        "Yangjiang"
+      ],
+      "Yangtze_River_Delta_Extended": [
+        "Jinhua"
+      ]
+    }
+  },
+  "covered_years": [
+    2023,
+    2024
+  ],
+  "future_years": [
+    2025
+  ],
+  "fit": {
+    "cities": [
+      "Beijing",
+      "Tianjin",
+      "Handan",
+      "Baoding",
+      "Tangshan",
+      "Cangzhou",
+      "Zhengzhou",
+      "Jinan",
+      "Jiamusi",
+      "Shenyang",
+      "Mudanjiang",
+      "Harbin",
+      "Qiqihar",
+      "Anshan",
+      "Changchun",
+      "Jilin_City",
+      "Dazhou",
+      "Yibin",
+      "Nanchong",
+      "Luzhou",
+      "Chongqing",
+      "Neijiang",
+      "Deyang",
+      "Leshan",
+      "Guangzhou",
+      "Qingyuan",
+      "Zhaoqing",
+      "Shenzhen",
+      "Maoming",
+      "Fuzhou",
+      "Quanzhou",
+      "Shaoguan",
+      "Hangzhou",
+      "Nanjing",
+      "Nantong",
+      "Yancheng",
+      "Wenzhou",
+      "Shanghai",
+      "Xuzhou",
+      "Hefei"
+    ],
+    "years": [
+      2023,
+      2024
+    ]
+  },
+  "validation": {
+    "cities": [
+      "Shijiazhuang",
+      "Daqing",
+      "Mianyang",
+      "Huizhou",
+      "Ningbo"
+    ],
+    "years": [
+      2023,
+      2024
+    ]
+  },
+  "final_evaluation": {
+    "spatial_ood": {
+      "cities": [
+        "Dezhou",
+        "Dalian",
+        "Chengdu",
+        "Yangjiang",
+        "Jinhua"
+      ],
+      "years": [
+        2023,
+        2024
+      ],
+      "ood_axes": [
+        "city"
+      ]
+    },
+    "temporal_ood": {
+      "cities": [
+        "Beijing",
+        "Tianjin",
+        "Handan",
+        "Baoding",
+        "Tangshan",
+        "Cangzhou",
+        "Zhengzhou",
+        "Jinan",
+        "Jiamusi",
+        "Shenyang",
+        "Mudanjiang",
+        "Harbin",
+        "Qiqihar",
+        "Anshan",
+        "Changchun",
+        "Jilin_City",
+        "Dazhou",
+        "Yibin",
+        "Nanchong",
+        "Luzhou",
+        "Chongqing",
+        "Neijiang",
+        "Deyang",
+        "Leshan",
+        "Guangzhou",
+        "Qingyuan",
+        "Zhaoqing",
+        "Shenzhen",
+        "Maoming",
+        "Fuzhou",
+        "Quanzhou",
+        "Shaoguan",
+        "Hangzhou",
+        "Nanjing",
+        "Nantong",
+        "Yancheng",
+        "Wenzhou",
+        "Shanghai",
+        "Xuzhou",
+        "Hefei"
+      ],
+      "years": [
+        2025
+      ],
+      "ood_axes": [
+        "time"
+      ]
+    },
+    "joint_spatiotemporal_ood": {
+      "cities": [
+        "Dezhou",
+        "Dalian",
+        "Chengdu",
+        "Yangjiang",
+        "Jinhua"
+      ],
+      "years": [
+        2025
+      ],
+      "ood_axes": [
+        "city",
+        "time"
+      ]
+    }
+  },
+  "sealed_reserved": {
+    "validation_cities_future": {
+      "cities": [
+        "Shijiazhuang",
+        "Daqing",
+        "Mianyang",
+        "Huizhou",
+        "Ningbo"
+      ],
+      "years": [
+        2025
+      ]
+    }
+  }
+}

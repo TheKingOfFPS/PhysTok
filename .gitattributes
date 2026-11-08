@@ -1,0 +1,3 @@
+# Preserve exact bytes: frozen source/result manifests include SHA-256 values.
+# Automatic CRLF/LF conversion would invalidate them on a clean checkout.
+* -text

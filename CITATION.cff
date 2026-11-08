@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the PhysTok manuscript if you use this research code."
+type: software
+title: "PhysTok: Population-Frozen Evaluation and Schema-Organized Tokens for City-Level Forecasting"
+version: 0.1.0
+authors:
+  - family-names: Lu
+    given-names: Yuxiang
+  - family-names: Wang
+    given-names: Dongjie
+  - family-names: Han
+    given-names: Dong
+abstract: "Local release candidate for the PhysTok research manuscript; publication and license approval pending."
+preferred-citation:
+  type: unpublished
+  title: "Population-Frozen Evaluation and Schema-Organized Tokens for City-Level Forecasting"
+  authors:
+    - family-names: Lu
+      given-names: Yuxiang
+    - family-names: Wang
+      given-names: Dongjie
+    - family-names: Han
+      given-names: Dong
+  year: 2026
+  notes: "Manuscript version November 8, 2026. No acceptance or publication DOI asserted."

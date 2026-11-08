@@ -1,0 +1,408 @@
+{
+  "status": "PASS",
+  "python_packages_checked": [
+    "numpy",
+    "pandas",
+    "xarray",
+    "zarr",
+    "pyarrow",
+    "torch",
+    "numcodecs",
+    "dask",
+    "netCDF4",
+    "cfgrib",
+    "eccodes",
+    "cdsapi",
+    "tqdm"
+  ],
+  "pipeline_files": [
+    {
+      "file": "02_build_era5_canonical.py",
+      "sha256": "e825128d71783db91a5282b9c47699743706f7d3a32e5caf0e206dfbf5c8b495",
+      "imports": [
+        "__future__",
+        "argparse",
+        "calendar",
+        "cfgrib",
+        "csv",
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "inspect",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "sys",
+        "typing",
+        "warnings",
+        "xarray",
+        "zarr"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "03_build_era5_derived.py",
+      "sha256": "e8dc7a2f69c6a340d40fd9380958f90ea57054eed9038aeb7f3dfe4241b9132c",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "inspect",
+        "json",
+        "math",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "sys",
+        "typing",
+        "xarray",
+        "zarr"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "05_extract_city_meteorology.py",
+      "sha256": "cc02ed7ddbbc6e0e57e9fbb8e6d25755bac5f8be7390b8af8c6a8fa957c01f06",
+      "imports": [
+        "__future__",
+        "argparse",
+        "csv",
+        "datetime",
+        "json",
+        "math",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "typing",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "06_build_observed_era5_merged.py",
+      "sha256": "8070e54a5ec88c71967295dc5a92755843be346f970f00270093b410ec7bc46e",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "inspect",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "07_build_pm25_24h_task_index.py",
+      "sha256": "9009226926232668d48b62edf0669f737a9ac27a1ec38e84d441aa2f58101aff",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "08_bind_observed_task_splits.py",
+      "sha256": "e7ae9d74fe4fe7296564ccc242df98bd259408116c8cbd59abee9bb10fe8b653",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "09_build_observed_issue_time_feature_bank.py",
+      "sha256": "d996da852ad2b0c46716a8d6e94b2d414e41942b76fb44ca80fd8a895ae7f9b0",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "inspect",
+        "json",
+        "math",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "typing",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "10_build_observed_fold_local_artifacts.py",
+      "sha256": "7f3002c2cf65cc805a4dd839e1ab95bd0a74a7358045171f72e74f9a87595325",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "tqdm",
+        "typing",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "75a_build_central_china_external_cnemc.py",
+      "sha256": "41e22b09e76829893fdc871d262dcd527b6ae0b008f44efac6ce962aba31f7df",
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "tqdm",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "75b_acquire_central_china_external_era5.py",
+      "sha256": "414398c86ad45192d66063c73499f428991e8e577a55969d71791619032d2bf3",
+      "imports": [
+        "__future__",
+        "argparse",
+        "calendar",
+        "cdsapi",
+        "collections",
+        "concurrent.futures",
+        "csv",
+        "dataclasses",
+        "datetime",
+        "eccodes",
+        "hashlib",
+        "json",
+        "math",
+        "numpy",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "typing"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "76_build_central_china_external_frozen_inputs.py",
+      "sha256": "9c58e605fc2c3ab2bce0288f720149a3270a85ae0860264a502ac843a6787cd1",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "inspect",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "types",
+        "typing",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "acquire_era5_bulk.py",
+      "sha256": "20d41ee22d8f1df817cb851a8a9fb0f64ff2e5d619ae686354501f21360bafb3",
+      "imports": [
+        "__future__",
+        "argparse",
+        "calendar",
+        "cdsapi",
+        "collections",
+        "concurrent.futures",
+        "csv",
+        "dataclasses",
+        "datetime",
+        "eccodes",
+        "hashlib",
+        "json",
+        "math",
+        "numpy",
+        "os",
+        "pathlib",
+        "sys",
+        "time",
+        "typing"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "audit_cnemc_station_lifecycle_validity_sensitivity.py",
+      "sha256": "f7448e9023a38028e5e6be86ea35abd2992f9e7e355ed839e383069a675b083f",
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "datetime",
+        "json",
+        "math",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "tarfile",
+        "tqdm"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "audit_cnemc_station_registry_and_50city_roster.py",
+      "sha256": "41686008d3b97cf83bacbd11459f7e84f3c6342044071ebaf819f7d4cfca7a9d",
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "csv",
+        "datetime",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "re",
+        "tarfile",
+        "tqdm"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "audit_observed_fold_local_artifacts.py",
+      "sha256": "ea67834088df3fc653845fcda9e2e90b1628ca71e7fe9083d15ba877263011a8",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "tarfile",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "audit_observed_issue_time_feature_bank.py",
+      "sha256": "97014499c1e6c9b3c324c9fd83e2dfa66e47b6cdca4f7d91fd02c9efb0c3cc57",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "tarfile",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    },
+    {
+      "file": "build_cnemc_city_air_quality_canonical.py",
+      "sha256": "86fc1270120f8ad0f15dfb70044505b9cc31a6528767a26443bea87f39eba4fe",
+      "imports": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "tqdm",
+        "xarray"
+      ],
+      "compiled": true,
+      "imported_in_clean_env": true
+    }
+  ],
+  "external_dynamic_sources": {
+    "era5_canonical": "02_build_era5_canonical.py",
+    "era5_derived": "03_build_era5_derived.py",
+    "city_meteorology": "05_extract_city_meteorology.py",
+    "merge_reference": "06_build_observed_era5_merged.py",
+    "task_reference": "07_build_pm25_24h_task_index.py",
+    "feature_bank": "09_build_observed_issue_time_feature_bank.py"
+  },
+  "excel_dependency_required": false,
+  "direct_requests_dependency_required": false,
+  "external_aria2_required_by_public_entrypoint": false,
+  "external_download_backend": "cdsapi",
+  "implicit_original_repo_imports_found": false,
+  "full_raw_rebuild_executed": false,
+  "operational_receipts_generated_locally": [
+    "init external metadata-only protocol receipt",
+    "cnemc roster/lifecycle acquisition-independent computations",
+    "internal fresh ERA5 city-support audit",
+    "raw ERA5 audited acquisition receipts from own download"
+  ],
+  "user_supplied_files": [
+    "1127 CNEMC daily station CSVs, 2022-12-01 through 2025-12-31",
+    "station_registry/source_files/\u7ad9\u70b9\u5217\u8868-2022.02.13\u8d77.csv with six documented columns",
+    "own CDS account/accepted dataset licenses and access token outside repository"
+  ],
+  "limits": [
+    "No access to user raw data: real GRIB decoding, full canonical/derived/merge/feature/fold output reconstruction remains unexecuted.",
+    "Existing raw GRIBs without matching acquisition audits require user-local audit/acquisition; no historical PASS receipt is distributed.",
+    "Optional parent pre-CNEMC schema is not required; lineage comparison emits a warning when absent."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "analysis_id": "phystok_v2_main_baseline_paired_statistics_20261025_r1",
+  "base_id": "phystok_v2_frozen_recipe_20261017_r1",
+  "base_freeze_sha256": "f67681d472c7f953d9ea793821925a3321ce1ab968659254507d921cf6ee3c66",
+  "seeds": [
+    20260826,
+    20260827,
+    20260828
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "scenarios": [
+    "Spatial",
+    "Future",
+    "Joint",
+    "External-Spatial",
+    "External-Joint"
+  ],
+  "display_aliases": {
+    "Future": "Future-Year"
+  },
+  "comparisons": [
+    {
+      "comparator": "timexer",
+      "scenarios": [
+        "Spatial",
+        "Future",
+        "Joint",
+        "External-Spatial",
+        "External-Joint"
+      ]
+    },
+    {
+      "comparator": "informer",
+      "scenarios": [
+        "Spatial"
+      ]
+    }
+  ],
+  "metrics": [
+    "rmse",
+    "mae"
+  ],
+  "family_size": 12,
+  "bootstrap_reps": 100000,
+  "bootstrap_seed": 20261025,
+  "alpha": 0.05,
+  "quantiles_pointwise": [
+    0.025,
+    0.975
+  ],
+  "quantiles_family": [
+    0.0020833333333333333,
+    0.9979166666666667
+  ],
+  "delta": "comparator minus phystok",
+  "percent_denominator": "observed comparator mean pooled metric;100*delta_mean/comparator_mean",
+  "bootstrap_unit": "city; shared weights across models,all3 seeds,all hours,all folds; internal strata fixed5 regions; external10 one actual external panel without fabricated strata",
+  "pvalues": false,
+  "tie_rule": "exact equality of computed float64 city pooled RMSE; ties reported separately and not counted as PhysTok wins",
+  "concentration": "top1/top5 shares of gross positive mean-seed city SSE gain, net-share may exceed100%; leave-one-city-out point diagnostics descriptive only, never delete cities from main estimates",
+  "stopping_policy": "fail closed before inference on support mismatch or unexplained official metric discrepancy; no silent row deletion",
+  "gpu_actions_allowed": false,
+  "checkpoint_reselection_allowed": false,
+  "selection_disclosure": "comparators selected from previously seen benchmark ranks;12-endpoint multiplicity is not selection adjustment over all6 baselines"
+}

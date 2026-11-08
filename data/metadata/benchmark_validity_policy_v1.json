@@ -1,0 +1,35 @@
+{
+  "policy_id": "benchmark_validity_policy_v1",
+  "created_at_utc": "2026-08-29T12:31:43+00:00",
+  "status": "FROZEN",
+  "task": {
+    "target": "pm25_city_mean",
+    "forecast_horizon_hours": 24,
+    "target_semantics": "single-point fixed 24-hour-ahead observed city PM2.5"
+  },
+  "target_hour_validity": {
+    "selected_mask_variable": "pm25_valid_hj_q95",
+    "selected_expected_count_variable": "pm25_expected_n_q95",
+    "selected_required_count_variable": "pm25_required_n_hj_q95",
+    "rule": "At target hour t+24, PM2.5 must be finite after frozen station-level QC and the number of finite eligible non-control stations must satisfy the HJ-style count threshold derived from the city's monthly Q95 positive hourly station count.",
+    "expected_count_definition": "For each city-month, take the Q95 (higher interpolation) of positive hourly valid non-control-station counts.",
+    "required_count_definition": "If expected count >=4, require ceil(0.75*expected); if expected count <4, require ceil(0.50*expected).",
+    "selection_rationale": "Q95 is deliberately conservative against temporary network outages being reinterpreted as a smaller normal station roster. Compared with cov50/mode, the aggregate retention penalty is small, while known temporary station-count collapses are less likely to be legitimized."
+  },
+  "non_rules": {
+    "no_target_magnitude_filter": true,
+    "no_percentile_outlier_filter": true,
+    "no_city_exclusion_due_to_q95_retention": true,
+    "no_predictor_history_completeness_requirement_here": true,
+    "no_destructive_filtering_of_merged_store": true
+  },
+  "predictor_missingness_boundary": {
+    "principle": "This policy governs target-hour benchmark validity only. Predictor/history missingness is handled later by model-input construction and fold-local preprocessing; target QC must not be reused as a blanket history-row deletion rule."
+  },
+  "future_data_policy": {
+    "2025_concentration_magnitudes_used_for_policy_selection": false,
+    "2025_station_availability_mask_used_for_validity_qc": true,
+    "2025_used_for_model_selection": false
+  },
+  "public_rebuild_note": "Frozen protocol rules only. Historical internal audit receipts and observations are not distributed; users reconstruct and audit their own inputs."
+}

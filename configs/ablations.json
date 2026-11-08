@@ -1,0 +1,720 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "phystok_frozen_ablations_public_candidate",
+  "reference_main_benchmark_id": "phystok_v2_frozen_recipe_20261017_r1",
+  "variants": {
+    "delayed_xview": {
+      "model": "phystok",
+      "model_variant": "delayed_xview",
+      "group": "representation",
+      "arm": "A",
+      "seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial",
+        "Future",
+        "Joint",
+        "External-Spatial",
+        "External-Joint"
+      ],
+      "model_config": {
+        "adapter_version": "phystok_scalar24_v2",
+        "batch_size": 512,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 40.0,
+          "initial_updates": 54000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 80.0,
+          "max_skipped_updates": 8,
+          "max_updates": 108000,
+          "min_lr": 1e-06,
+          "min_passes": 26.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 500
+        },
+        "candidates": [
+          {
+            "d_model": 512,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 512,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "reference_parameters": 27403141,
+      "scientific_control": {
+        "variant": "delayed_xview",
+        "new_fits": 30,
+        "seeds": [
+          20260826,
+          20260827,
+          20260828
+        ],
+        "folds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "parameters": 27403141,
+        "layer_policy": [
+          "block_diagonal",
+          "block_diagonal",
+          "block_diagonal",
+          "full"
+        ],
+        "automatic_fit_retry": false,
+        "primary_endpoint": "Joint pooled RMSE",
+        "contrast": "Delayed minus Full; positive favors Full",
+        "bootstrap": {
+          "reps": 10000,
+          "seed": 20261021,
+          "unit": "city within region; same weight across all folds and seeds",
+          "primary": "mean of three seed pooled RMSE differences",
+          "ci": "conditional pointwise percentile 95%; primary endpoint only confirmatory contrast; secondary descriptive"
+        },
+        "seen_test_disclosed": true,
+        "formal_seed_fold_tasks": 30,
+        "evaluation_tasks": 150
+      }
+    },
+    "strict_late_fusion": {
+      "model": "phystok",
+      "model_variant": "strict_late_fusion",
+      "group": "representation",
+      "arm": "A",
+      "seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial",
+        "Future",
+        "Joint",
+        "External-Spatial",
+        "External-Joint"
+      ],
+      "model_config": {
+        "adapter_version": "phystok_scalar24_v2",
+        "batch_size": 512,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 40.0,
+          "initial_updates": 54000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 80.0,
+          "max_skipped_updates": 8,
+          "max_updates": 108000,
+          "min_lr": 1e-06,
+          "min_passes": 26.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 500
+        },
+        "candidates": [
+          {
+            "d_model": 512,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 512,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "reference_parameters": 27409183,
+      "scientific_control": {
+        "variant": "strict_late_fusion",
+        "new_fits": 30,
+        "seeds": [
+          20260826,
+          20260827,
+          20260828
+        ],
+        "folds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "parameters": 27409183,
+        "layer_policy": [
+          "block_diagonal",
+          "block_diagonal",
+          "block_diagonal",
+          "block_diagonal"
+        ],
+        "automatic_fit_retry": false,
+        "primary_endpoint": "All five scenarios, RMSE and MAE, two A-reference contrasts; family of 20",
+        "contrast": "A minus comparator (Full or Delayed); positive favors comparator",
+        "bootstrap": {
+          "reps": 100000,
+          "seed": 20261023,
+          "unit": "city within region; same weight across models, seeds and all fold exposures",
+          "primary": "mean of three seed-wise pooled error differences",
+          "family_size": 20,
+          "alpha": 0.05,
+          "ci": "pointwise percentile 95% plus Bonferroni familywise nominal 95%: each percentile 99.75%; approximate bootstrap coverage conditional on observed models/seeds/city panel; all 20 endpoints co-reported"
+        },
+        "seen_test_disclosed": true,
+        "formal_seed_fold_tasks": 30,
+        "evaluation_tasks": 150,
+        "full_parameters": 27403141,
+        "head_hidden": 461
+      }
+    },
+    "plain_state_flatten": {
+      "model": "phystok",
+      "model_variant": "plain_state_flatten",
+      "group": "representation",
+      "arm": "A",
+      "seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial",
+        "Future",
+        "Joint",
+        "External-Spatial",
+        "External-Joint"
+      ],
+      "model_config": {
+        "adapter_version": "phystok_scalar24_v2",
+        "batch_size": 512,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 40.0,
+          "initial_updates": 54000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 80.0,
+          "max_skipped_updates": 8,
+          "max_updates": 108000,
+          "min_lr": 1e-06,
+          "min_passes": 26.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 500
+        },
+        "candidates": [
+          {
+            "d_model": 512,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 512,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "reference_parameters": 27449733,
+      "scientific_control": {
+        "variant": "plain_state_flatten",
+        "new_fits": 30,
+        "seeds": [
+          20260826,
+          20260827,
+          20260828
+        ],
+        "folds": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "parameters": 27449733,
+        "full_parameters": 27403141,
+        "state_vector_dim": 68,
+        "state_slots": 6,
+        "generic_hidden": 128,
+        "generic_projectors": "six independent 68->128->512->LayerNorm512; all68 in every slot",
+        "generic_slot_identity": "independent learned6x512; no history family embedding reuse",
+        "historical_family_identity_retained": true,
+        "layer_policy": [
+          "full",
+          "full",
+          "full",
+          "full"
+        ],
+        "head_hidden": 512,
+        "head_readout": "54 encoded histories only; original Full head unchanged",
+        "automatic_fit_retry": false,
+        "primary_endpoint": "Spatial pooled RMSE",
+        "primary_choice_informed_by_prior_results": true,
+        "primary_inference_policy": "Report predesignated primary pointwise95 and all10 familywise nominal95; robust superiority claims require familywise interval excluding zero. No outcome-selected primary switching.",
+        "contrast": "Plain minus Full; positive favors Full",
+        "bootstrap": {
+          "reps": 100000,
+          "seed": 20261024,
+          "unit": "city within region; same weights across models/seeds/all fold exposures",
+          "family_size": 10,
+          "alpha": 0.05,
+          "ci": "pointwise percentile95 and Bonferroni nominal simultaneous95 across all10 endpoints, each99.5% at quantiles0.0025/0.9975; conditional on observed models/three seeds/city panel; not equivalence or seed-population uncertainty"
+        },
+        "seen_test_disclosed": true,
+        "formal_seed_fold_tasks": 30,
+        "evaluation_tasks": 150,
+        "descriptive_comparators_only": [
+          "delayed_xview",
+          "strict_late_fusion"
+        ],
+        "no_other_experiments": true
+      }
+    },
+    "phystok_small": {
+      "model": "phystok",
+      "group": "T8",
+      "arm": "A",
+      "model_config": {
+        "adapter_version": "phystok_scalar24_v2",
+        "batch_size": 512,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 40.0,
+          "initial_updates": 54000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 80.0,
+          "max_skipped_updates": 8,
+          "max_updates": 108000,
+          "min_lr": 1e-06,
+          "min_passes": 26.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 500
+        },
+        "candidates": [
+          {
+            "d_model": 256,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 512,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "capacity": {
+        "d_model": 256
+      },
+      "reference_parameters": 7021701,
+      "model_variant": "phystok_small",
+      "seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial",
+        "Future",
+        "Joint",
+        "External-Spatial",
+        "External-Joint"
+      ]
+    },
+    "itransformer_scaled": {
+      "model": "itransformer",
+      "group": "T8",
+      "arm": "A",
+      "model_config": {
+        "adapter_version": "itransformer_scalar24_v2",
+        "batch_size": 128,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 26.0,
+          "initial_updates": 144000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 54.0,
+          "max_skipped_updates": 8,
+          "max_updates": 288000,
+          "min_lr": 1e-06,
+          "min_passes": 6.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 1000
+        },
+        "candidates": [
+          {
+            "d_model": 1400,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 128,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "capacity": {
+        "d_model": 1400
+      },
+      "reference_parameters": 27284497,
+      "model_variant": "itransformer_scaled",
+      "seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial",
+        "Future",
+        "Joint",
+        "External-Spatial",
+        "External-Joint"
+      ]
+    },
+    "timexer_scaled": {
+      "model": "timexer",
+      "group": "T8",
+      "arm": "A",
+      "model_config": {
+        "adapter_version": "timexer_scalar24_v2",
+        "batch_size": 128,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 26.0,
+          "initial_updates": 144000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 54.0,
+          "max_skipped_updates": 8,
+          "max_updates": 288000,
+          "min_lr": 1e-06,
+          "min_passes": 6.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 1000
+        },
+        "candidates": [
+          {
+            "d_model": 1072,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 128,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "capacity": {
+        "d_model": 1072
+      },
+      "reference_parameters": 27316513,
+      "model_variant": "timexer_scaled",
+      "seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial",
+        "Future",
+        "Joint",
+        "External-Spatial",
+        "External-Joint"
+      ]
+    },
+    "abc_b": {
+      "model": "phystok",
+      "group": "ABC",
+      "arm": "B",
+      "model_config": {
+        "adapter_version": "phystok_scalar24_v2",
+        "batch_size": 512,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 40.0,
+          "initial_updates": 54000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 80.0,
+          "max_skipped_updates": 8,
+          "max_updates": 108000,
+          "min_lr": 1e-06,
+          "min_passes": 26.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 500
+        },
+        "candidates": [
+          {
+            "d_model": 512,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 512,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "capacity": {
+        "d_model": 512
+      },
+      "reference_parameters": 27403141,
+      "model_variant": null,
+      "seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial"
+      ]
+    },
+    "abc_c": {
+      "model": "phystok",
+      "group": "ABC",
+      "arm": "C",
+      "model_config": {
+        "adapter_version": "phystok_scalar24_v2",
+        "batch_size": 512,
+        "budget": {
+          "extension_factor": 2.0,
+          "initial_passes": 40.0,
+          "initial_updates": 54000,
+          "lr_factor": 0.5,
+          "lr_patience_checks": 2,
+          "max_nonfinite_batches": 0,
+          "max_passes": 80.0,
+          "max_skipped_updates": 8,
+          "max_updates": 108000,
+          "min_lr": 1e-06,
+          "min_passes": 26.0,
+          "min_updates": 36000,
+          "patience_checks": 6,
+          "recent_improvement_checks": 3,
+          "recovery_checks": 2,
+          "relative_min_delta": 0.0001,
+          "required_lr_reductions": 1,
+          "val_every_passes": 0.5,
+          "val_every_updates": 500
+        },
+        "candidates": [
+          {
+            "d_model": 512,
+            "learning_rate": 0.0001,
+            "weight_decay": 0.0001
+          }
+        ],
+        "eval_batch_size": 512,
+        "gradient_clip": 1.0,
+        "optimizer": "AdamW"
+      },
+      "capacity": {
+        "d_model": 512
+      },
+      "reference_parameters": 27403141,
+      "model_variant": null,
+      "seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial"
+      ]
+    }
+  },
+  "references": {
+    "abc_a": {
+      "model": "phystok",
+      "seed": 20260826,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scenarios": [
+        "Spatial"
+      ],
+      "policy": "reuse selected main checkpoint for each fold; never retrain A"
+    },
+    "phystok_full": {
+      "model": "phystok",
+      "seed": 20260826
+    },
+    "itransformer_original": {
+      "model": "itransformer",
+      "seed": 20260826
+    },
+    "timexer_original": {
+      "model": "timexer",
+      "seed": 20260826
+    }
+  },
+  "abc_bootstrap": {
+    "seed": 20260926,
+    "reps": 10000,
+    "scheme": "paired region-stratified city cluster: 10 draws per region with replacement",
+    "ci": "percentile 0.025/0.975",
+    "secondary_untouched_claim": false
+  },
+  "no_hpo": true,
+  "automatic_retry": false,
+  "new_fit_count": 140
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "device": "cpu",
+  "parameters": 27403141,
+  "shape": [
+    2
+  ],
+  "optimizer_updates": 1,
+  "loss": 0.14388872683048248,
+  "research_data_used": false
+}

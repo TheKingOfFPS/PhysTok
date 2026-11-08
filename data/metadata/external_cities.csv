@@ -1,0 +1,11 @@
+city_index,region,priority,province,city,city_zh,latitude,longitude,coverage_role
+0,Central_China_External,1,Hubei,Wuhan,武汉,30.5928,114.3055,regional_core
+1,Central_China_External,2,Hubei,Xiangyang,襄阳,32.0089,112.1224,northwest_boundary
+2,Central_China_External,3,Hubei,Yichang,宜昌,30.6919,111.2865,western_transition
+3,Central_China_External,4,Hubei,Jingzhou,荆州,30.3348,112.2407,jianghan_plain_southwest
+4,Central_China_External,5,Hunan,Yueyang,岳阳,29.3571,113.1292,north_hunan_yangtze_transition
+5,Central_China_External,6,Hunan,Changsha,长沙,28.2282,112.9388,regional_core
+6,Central_China_External,7,Hunan,Hengyang,衡阳,26.8932,112.5719,south_hunan
+7,Central_China_External,8,Jiangxi,Jiujiang,九江,29.7051,116.0019,north_jiangxi_yangtze_transition
+8,Central_China_External,9,Jiangxi,Nanchang,南昌,28.682,115.8579,regional_core
+9,Central_China_External,10,Jiangxi,Ganzhou,赣州,25.8311,114.935,southern_boundary

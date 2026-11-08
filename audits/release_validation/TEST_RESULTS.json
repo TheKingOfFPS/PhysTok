@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "tests_passed": 42,
+  "tests_failed": 0,
+  "command": "python -m pytest -q",
+  "environment": "clean CPU venv",
+  "fixtures": "generated at runtime; no research observations or checkpoints",
+  "scope": "model, data, experiments, metrics, resume, pairing, stale cache/cohort and statistics tests"
+}

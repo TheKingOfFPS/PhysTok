@@ -1,0 +1,288 @@
+{
+  "redistributed": [
+    {
+      "model": "informer",
+      "repository": "zhouhaoyi/Informer2020",
+      "commit": "29f2a739226a509202a092b464163da81fa74960",
+      "upstream_path": "models/model.py",
+      "url": "https://raw.githubusercontent.com/zhouhaoyi/Informer2020/29f2a739226a509202a092b464163da81fa74960/models/model.py",
+      "original_sha256": "bc8e062fbbb4f4ae970ca0d02d2bf43b2e92c3251c3627d887c01d35cbc6891a",
+      "runtime_sha256": "c143409e30d89f4d66a081b7ee00ab8ca913fa297d53ad4ae403ec9b1384c661",
+      "modifications": "absolute import namespace only",
+      "public_runtime_sha256": "d7977d73a57d03efe2df089a568455af10e0f94fd5edf2d6b83b809aa100677d"
+    },
+    {
+      "model": "informer",
+      "repository": "zhouhaoyi/Informer2020",
+      "commit": "29f2a739226a509202a092b464163da81fa74960",
+      "upstream_path": "models/attn.py",
+      "url": "https://raw.githubusercontent.com/zhouhaoyi/Informer2020/29f2a739226a509202a092b464163da81fa74960/models/attn.py",
+      "original_sha256": "d9a294d829371759f1984f9f8fee12408774dda1a3de662313151d86e8513528",
+      "runtime_sha256": "e97c5819abf04083172aa80c8b9b489d9a61d1e1505e2228a94ef3ce10ae58e9",
+      "modifications": "absolute import namespace only",
+      "public_runtime_sha256": "8f06de3f4d23651ada071f77c13ec3cd90d9b2c6565c2ded4bf0993cb6ca2056"
+    },
+    {
+      "model": "informer",
+      "repository": "zhouhaoyi/Informer2020",
+      "commit": "29f2a739226a509202a092b464163da81fa74960",
+      "upstream_path": "models/embed.py",
+      "url": "https://raw.githubusercontent.com/zhouhaoyi/Informer2020/29f2a739226a509202a092b464163da81fa74960/models/embed.py",
+      "original_sha256": "d7f4f06370c640b56acab9df4092988f7711afb33cc64e868dc080286a0c4b9d",
+      "runtime_sha256": "d7f4f06370c640b56acab9df4092988f7711afb33cc64e868dc080286a0c4b9d",
+      "modifications": "none",
+      "public_runtime_sha256": "d7f4f06370c640b56acab9df4092988f7711afb33cc64e868dc080286a0c4b9d"
+    },
+    {
+      "model": "informer",
+      "repository": "zhouhaoyi/Informer2020",
+      "commit": "29f2a739226a509202a092b464163da81fa74960",
+      "upstream_path": "models/encoder.py",
+      "url": "https://raw.githubusercontent.com/zhouhaoyi/Informer2020/29f2a739226a509202a092b464163da81fa74960/models/encoder.py",
+      "original_sha256": "bfd72a16e8bf7b2b36bcab47d198b885863e4b2ebfa5707f619c31078bc87737",
+      "runtime_sha256": "bfd72a16e8bf7b2b36bcab47d198b885863e4b2ebfa5707f619c31078bc87737",
+      "modifications": "none",
+      "public_runtime_sha256": "bfd72a16e8bf7b2b36bcab47d198b885863e4b2ebfa5707f619c31078bc87737"
+    },
+    {
+      "model": "informer",
+      "repository": "zhouhaoyi/Informer2020",
+      "commit": "29f2a739226a509202a092b464163da81fa74960",
+      "upstream_path": "models/decoder.py",
+      "url": "https://raw.githubusercontent.com/zhouhaoyi/Informer2020/29f2a739226a509202a092b464163da81fa74960/models/decoder.py",
+      "original_sha256": "ec2ebb81ba8d5400c06cb7db5ae2d93bb95dd04b2afbc33b5cefa284afb9a9df",
+      "runtime_sha256": "ec2ebb81ba8d5400c06cb7db5ae2d93bb95dd04b2afbc33b5cefa284afb9a9df",
+      "modifications": "none",
+      "public_runtime_sha256": "ec2ebb81ba8d5400c06cb7db5ae2d93bb95dd04b2afbc33b5cefa284afb9a9df"
+    },
+    {
+      "model": "informer",
+      "repository": "zhouhaoyi/Informer2020",
+      "commit": "29f2a739226a509202a092b464163da81fa74960",
+      "upstream_path": "utils/masking.py",
+      "url": "https://raw.githubusercontent.com/zhouhaoyi/Informer2020/29f2a739226a509202a092b464163da81fa74960/utils/masking.py",
+      "original_sha256": "33862345a8e9297b4214614e16c86829279953506319da4ffe33a476ef047c28",
+      "runtime_sha256": "33862345a8e9297b4214614e16c86829279953506319da4ffe33a476ef047c28",
+      "modifications": "none",
+      "public_runtime_sha256": "33862345a8e9297b4214614e16c86829279953506319da4ffe33a476ef047c28"
+    },
+    {
+      "model": "informer",
+      "repository": "zhouhaoyi/Informer2020",
+      "commit": "29f2a739226a509202a092b464163da81fa74960",
+      "upstream_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/zhouhaoyi/Informer2020/29f2a739226a509202a092b464163da81fa74960/LICENSE",
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "runtime_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modifications": "none",
+      "public_runtime_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "model": "patchtst",
+      "repository": "yuqinie98/PatchTST",
+      "commit": "204c21efe0b39603ad6e2ca640ef5896646ab1a9",
+      "upstream_path": "PatchTST_supervised/layers/PatchTST_backbone.py",
+      "url": "https://raw.githubusercontent.com/yuqinie98/PatchTST/204c21efe0b39603ad6e2ca640ef5896646ab1a9/PatchTST_supervised/layers/PatchTST_backbone.py",
+      "original_sha256": "df67173153787c2356bdfb6491159cd754332ef7382986efe879e1fbea8ebf26",
+      "runtime_sha256": "0059777f4a2935c1320be4f2f9d3e7ed4d0a6d7527e69eb0655bf8478239ccd8",
+      "modifications": "absolute import namespace only",
+      "public_runtime_sha256": "dab677c2dff8a0e03ea56e35e7e7c787e02e6b3b9e05efdbf88614cfe167d9db"
+    },
+    {
+      "model": "patchtst",
+      "repository": "yuqinie98/PatchTST",
+      "commit": "204c21efe0b39603ad6e2ca640ef5896646ab1a9",
+      "upstream_path": "PatchTST_supervised/layers/PatchTST_layers.py",
+      "url": "https://raw.githubusercontent.com/yuqinie98/PatchTST/204c21efe0b39603ad6e2ca640ef5896646ab1a9/PatchTST_supervised/layers/PatchTST_layers.py",
+      "original_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+      "runtime_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+      "modifications": "none",
+      "public_runtime_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6"
+    },
+    {
+      "model": "patchtst",
+      "repository": "yuqinie98/PatchTST",
+      "commit": "204c21efe0b39603ad6e2ca640ef5896646ab1a9",
+      "upstream_path": "PatchTST_supervised/layers/RevIN.py",
+      "url": "https://raw.githubusercontent.com/yuqinie98/PatchTST/204c21efe0b39603ad6e2ca640ef5896646ab1a9/PatchTST_supervised/layers/RevIN.py",
+      "original_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+      "runtime_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+      "modifications": "none",
+      "public_runtime_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6"
+    },
+    {
+      "model": "patchtst",
+      "repository": "yuqinie98/PatchTST",
+      "commit": "204c21efe0b39603ad6e2ca640ef5896646ab1a9",
+      "upstream_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/yuqinie98/PatchTST/204c21efe0b39603ad6e2ca640ef5896646ab1a9/LICENSE",
+      "original_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "runtime_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modifications": "none",
+      "public_runtime_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "model": "itransformer",
+      "repository": "thuml/iTransformer",
+      "commit": "c2426e68ca13f74aaec08045c5c724d8ad328124",
+      "upstream_path": "model/iTransformer.py",
+      "url": "https://raw.githubusercontent.com/thuml/iTransformer/c2426e68ca13f74aaec08045c5c724d8ad328124/model/iTransformer.py",
+      "original_sha256": "6f34777a5a12c253a293f79e7e1fd5b6f79ac100b443951e051e269e7e2542db",
+      "runtime_sha256": "0b5c2afc80a6c84c4d4a5f7f05a7ddeeb93bd204b47a67071c58b423e2b6240b",
+      "modifications": "absolute import namespace only; algebraically identical out-of-place input normalization to support input gradients (CPU acceptance found upstream in-place autograd version conflict)",
+      "public_runtime_sha256": "99dae781f559fcd96778af846a1867d569a5483f09fcb417c277e02dfd60760a"
+    },
+    {
+      "model": "itransformer",
+      "repository": "thuml/iTransformer",
+      "commit": "c2426e68ca13f74aaec08045c5c724d8ad328124",
+      "upstream_path": "layers/Transformer_EncDec.py",
+      "url": "https://raw.githubusercontent.com/thuml/iTransformer/c2426e68ca13f74aaec08045c5c724d8ad328124/layers/Transformer_EncDec.py",
+      "original_sha256": "985c31f4ae187b08afaa9663dc960a40544b2ec33ab55389ceab3930edc1ce02",
+      "runtime_sha256": "985c31f4ae187b08afaa9663dc960a40544b2ec33ab55389ceab3930edc1ce02",
+      "modifications": "none",
+      "public_runtime_sha256": "985c31f4ae187b08afaa9663dc960a40544b2ec33ab55389ceab3930edc1ce02"
+    },
+    {
+      "model": "itransformer",
+      "repository": "thuml/iTransformer",
+      "commit": "c2426e68ca13f74aaec08045c5c724d8ad328124",
+      "upstream_path": "layers/SelfAttention_Family.py",
+      "url": "https://raw.githubusercontent.com/thuml/iTransformer/c2426e68ca13f74aaec08045c5c724d8ad328124/layers/SelfAttention_Family.py",
+      "original_sha256": "38ac67428d528b8e145e4944ca059b40629a8446c891142602d5aaadc38dfd9e",
+      "runtime_sha256": "4645d3457b5a40fccaa6dc418713b1fdf5867c34fa950d7a9305810253d80c37",
+      "modifications": "absolute import namespace only; guard unused optional Reformer import, no active-core math changes",
+      "public_runtime_sha256": "f273d54dadc8c24544e15bd8b931f648bcfebad667c1196fed218a891782e2d6"
+    },
+    {
+      "model": "itransformer",
+      "repository": "thuml/iTransformer",
+      "commit": "c2426e68ca13f74aaec08045c5c724d8ad328124",
+      "upstream_path": "layers/Embed.py",
+      "url": "https://raw.githubusercontent.com/thuml/iTransformer/c2426e68ca13f74aaec08045c5c724d8ad328124/layers/Embed.py",
+      "original_sha256": "2de7e5049a696d320a23a8bdb6e08e823cf7fa3f246a0a49555fcd729c5c8398",
+      "runtime_sha256": "2de7e5049a696d320a23a8bdb6e08e823cf7fa3f246a0a49555fcd729c5c8398",
+      "modifications": "none",
+      "public_runtime_sha256": "2de7e5049a696d320a23a8bdb6e08e823cf7fa3f246a0a49555fcd729c5c8398"
+    },
+    {
+      "model": "itransformer",
+      "repository": "thuml/iTransformer",
+      "commit": "c2426e68ca13f74aaec08045c5c724d8ad328124",
+      "upstream_path": "utils/masking.py",
+      "url": "https://raw.githubusercontent.com/thuml/iTransformer/c2426e68ca13f74aaec08045c5c724d8ad328124/utils/masking.py",
+      "original_sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+      "runtime_sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+      "modifications": "none",
+      "public_runtime_sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef"
+    },
+    {
+      "model": "itransformer",
+      "repository": "thuml/iTransformer",
+      "commit": "c2426e68ca13f74aaec08045c5c724d8ad328124",
+      "upstream_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/thuml/iTransformer/c2426e68ca13f74aaec08045c5c724d8ad328124/LICENSE",
+      "original_sha256": "29d2a4c09fa577780522219dc248466977f77cd420354c5e9a0e86550be2b849",
+      "runtime_sha256": "29d2a4c09fa577780522219dc248466977f77cd420354c5e9a0e86550be2b849",
+      "modifications": "none",
+      "public_runtime_sha256": "29d2a4c09fa577780522219dc248466977f77cd420354c5e9a0e86550be2b849"
+    },
+    {
+      "model": "phystok",
+      "upstream_path": "07_scripts/modeling/strong_vtt_model.py",
+      "original_sha256": "37741e14b752ad1ed978bc5e1447bb7c2d0eb49a623bcfc883c2dd6403a05cac",
+      "runtime_sha256": "37741e14b752ad1ed978bc5e1447bb7c2d0eb49a623bcfc883c2dd6403a05cac",
+      "modifications": "none; exact architecture snapshot",
+      "public_runtime_sha256": "37741e14b752ad1ed978bc5e1447bb7c2d0eb49a623bcfc883c2dd6403a05cac"
+    }
+  ],
+  "external_source_required": [
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "models/TimeXer.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/models/TimeXer.py",
+      "original_sha256": "b334d7869544d0a5de7a35501d0342d7bd0be4ebda06ccc045855a42819728c0",
+      "runtime_sha256": "5084a64d7e57a6182154a8be89597d837b0ecb9161e84b423d45cecf23d2c9e3",
+      "modifications": "absolute import namespace only; algebraically identical out-of-place input normalization to support input gradients (CPU acceptance found upstream in-place autograd version conflict)",
+      "public_runtime_sha256": "9a83e5ef5e642e2605d28aa65d617b980c0a82406b23c901cedcb6e428375e15",
+      "replacements": [
+        {
+          "old": "from layers.SelfAttention_Family import",
+          "new": "from phystok.models.vendor.timexer.layers.SelfAttention_Family import"
+        },
+        {
+          "old": "from layers.Embed import",
+          "new": "from phystok.models.vendor.timexer.layers.Embed import"
+        },
+        {
+          "old": "x_enc /= stdev",
+          "new": "x_enc = x_enc / stdev"
+        }
+      ]
+    },
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "layers/Embed.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/layers/Embed.py",
+      "original_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "runtime_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "modifications": "none",
+      "public_runtime_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "replacements": []
+    },
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "layers/SelfAttention_Family.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/layers/SelfAttention_Family.py",
+      "original_sha256": "6f6592aed0753e342fc04c01db70528c2eb191eeb067cd5fd4c8d348fddcb794",
+      "runtime_sha256": "cd394da0702ae8a4cde0ef59e148cf419b632f8b9619f5bcbea6ff0f95323448",
+      "modifications": "absolute import namespace only; guard unused optional Reformer import, no active-core math changes",
+      "public_runtime_sha256": "f29d3a23abafc879de1a3ceeb8ab4dd9963234dea200dc9a408f6d626723f15d",
+      "replacements": [
+        {
+          "old": "from utils.masking import",
+          "new": "from phystok.models.vendor.timexer.utils.masking import"
+        },
+        {
+          "old": "from reformer_pytorch import LSHSelfAttention",
+          "new": "try:\n    from reformer_pytorch import LSHSelfAttention\nexcept ImportError:\n    class LSHSelfAttention:\n        def __init__(self, *args, **kwargs):\n            raise ImportError(\"Optional Reformer is not part of Benchmark V2; install separately only if explicitly enabled\")"
+        }
+      ]
+    },
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "utils/masking.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/utils/masking.py",
+      "original_sha256": "5976ac3dc84915d0d294c1761573bc18434751f29ec421bcca5a9b280de46bae",
+      "runtime_sha256": "5976ac3dc84915d0d294c1761573bc18434751f29ec421bcca5a9b280de46bae",
+      "modifications": "none",
+      "public_runtime_sha256": "5976ac3dc84915d0d294c1761573bc18434751f29ec421bcca5a9b280de46bae",
+      "replacements": []
+    },
+    {
+      "model": "xlinear",
+      "repository": "Zaiwen/XLinear",
+      "commit": "af500c5478ef2a69ad36d04ffcdfe04aae4483e2",
+      "upstream_path": "models/XLinear.py",
+      "url": "https://raw.githubusercontent.com/Zaiwen/XLinear/af500c5478ef2a69ad36d04ffcdfe04aae4483e2/models/XLinear.py",
+      "original_sha256": "28b65f44f2bdbb63291beea32c6ee11b7ef5ed64c23ae89d70986f08c7c350f4",
+      "runtime_sha256": "a73eb5079d54bd59944805d2443f78ed47e5f0fc97bab6cf198ec8e921133628",
+      "modifications": "none; algebraically identical out-of-place input normalization to support input gradients (CPU acceptance found upstream in-place autograd version conflict)",
+      "public_runtime_sha256": "a73eb5079d54bd59944805d2443f78ed47e5f0fc97bab6cf198ec8e921133628",
+      "replacements": [
+        {
+          "old": "x_enc /= stdev",
+          "new": "x_enc = x_enc / stdev"
+        }
+      ]
+    }
+  ]
+}

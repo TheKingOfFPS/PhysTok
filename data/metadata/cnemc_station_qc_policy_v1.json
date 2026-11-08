@@ -1,0 +1,63 @@
+{
+  "policy_id": "cnemc_station_qc_policy_v1",
+  "created_at_utc": "2026-08-29T11:29:27+00:00",
+  "scope": {
+    "cities": 50,
+    "study_local_time_start": "2022-12-01 00:00:00",
+    "study_local_time_end": "2025-12-31 23:00:00",
+    "timezone": "Asia/Shanghai"
+  },
+  "station_eligibility": {
+    "rule": "eligible_city_station iff control_site != 'Y'",
+    "basis": "The QuotSoft/CNEMC city archive is reproduced by arithmetic means over valid non-control stations in 2023-2024; control sites are excluded.",
+    "no_value_based_station_exclusion": true
+  },
+  "pm25_station_value_qc": {
+    "raw_is_immutable": true,
+    "rule_1": {
+      "condition": "PM2.5 == 10000 ug/m3",
+      "action": "set derived station value to NaN before city aggregation",
+      "flag": "INSTRUMENT_UPPER_BOUND",
+      "basis": "Pre-frozen on 2023-2024 development data: exactly two observations, same station and consecutive hours, at the optional instrument upper-range boundary. Other high values are retained."
+    },
+    "negative_values": "none observed in 2023-2024; no generic threshold rule added",
+    "other_extremes": "retain",
+    "exact_repeated_low_values": "retain",
+    "winsorization": false,
+    "percentile_clipping": false,
+    "iqr_outlier_deletion": false
+  },
+  "city_hour_aggregation": {
+    "primary": "arithmetic mean of all finite eligible non-control station values after the frozen station-level QC rule",
+    "pm25_qc_companions": [
+      "median",
+      "std",
+      "min",
+      "max",
+      "q25",
+      "q75",
+      "iqr",
+      "mad",
+      "n_valid",
+      "exact10000_removed_count"
+    ],
+    "reported_precision_companion": "floor(mean + 0.5) for non-negative PM2.5, retained only as a consistency companion; unrounded mean is the modeling target"
+  },
+  "timestamp_semantics": {
+    "raw_archive_labels": "date + hour, with observed modern files using hour 0..23",
+    "interpretation": "interpret archived date/hour as China Standard Time civil-clock timestamp; preserve raw date/hour and convert Asia/Shanghai to UTC",
+    "hourly_mean_support": "PM2.5 is an archived 1-hour mean associated with the source timestamp; the underlying monitoring standard defines point 1-hour means over the preceding one-hour interval",
+    "protocol_year_boundary": "2023/2024/2025 roles are defined by Asia/Shanghai local calendar year"
+  },
+  "coverage_and_validity": {
+    "canonical_stage": "do not delete city-hour aggregates solely by a station-count gate; store multiple validity companions and freeze the downstream benchmark mask separately",
+    "candidate_expected_count_methods": [
+      "ACTIVE_COV50",
+      "NVALID_MODE",
+      "NVALID_Q95"
+    ],
+    "candidate_hj_style_rule": "if expected city-point count >=4, require >=75%; otherwise require >=50%",
+    "reason_for_deferral": "temporary network outages and genuine station retirement must not be conflated; existing sensitivity audits show aggregate robustness"
+  },
+  "public_rebuild_note": "Frozen protocol rules only. Historical internal audit receipts and observations are not distributed; users reconstruct and audit their own inputs."
+}

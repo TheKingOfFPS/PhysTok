@@ -1,0 +1,922 @@
+{
+  "paper": "PhysTok_ICDE2027_v11_author_stars_20261108.pdf",
+  "sources": [
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_MAIN_TABLE.csv",
+      "sha256": "0bc4702baa81abfb60eab2a246cfde3f10df49eea05c223c8bc6fed791f852c5",
+      "bytes": 6376
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_SEED_STATISTICS.csv",
+      "sha256": "36f824de7d48e8abefab6272b8816c4f56c898e07cf1ff02197245fcd5a27916",
+      "bytes": 15616
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/MAIN_BASELINE_PAIRED_RESULTS.csv",
+      "sha256": "e1f2c9c2f32140ccdabbc80ac622381c14e82f421a0a5eaa415a7f1b69e1385f",
+      "bytes": 5520
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_SUFFICIENT_STATISTICS.csv",
+      "sha256": "be6a1fe58bc320820bdb9c1bb56dedd64384486a40d4b7c7ff101da6df351501",
+      "bytes": 153890
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/EXPOSURE_SUFFICIENT_STATISTICS.csv",
+      "sha256": "70ed28c07c55297bb1f5ec0c91397bc1939c40ed06941a417cb92e971c43fadc",
+      "bytes": 24276
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_LEVEL_COMPARISONS.csv",
+      "sha256": "07ada3c03ca92e6a1745c7860da9ce2027a19d59f4a19480303c0e22b433eacc",
+      "bytes": 102887
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_SEED_COMPARISONS.csv",
+      "sha256": "5fcb096a4af4f9ddffa2b0b8094d0879724fe9971a1577ebd935944710fba21d",
+      "bytes": 157072
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_WIN_COUNTS_BY_SEED.csv",
+      "sha256": "b28b1139da7ad925f2c91b94c94f498850668a7db145c49b7c90e12b5df35bc0",
+      "bytes": 1394
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/REGIONAL_DESCRIPTIVE.csv",
+      "sha256": "e9b3a9a5d0e709bc55448b79ec53cdca26966f764b82e5d71f841c302c798751",
+      "bytes": 7270
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/PHYSICAL_EXPOSURE_AUDIT.csv",
+      "sha256": "7ae876c2231db9447b9c138f99b7647811c5f95afc8481a61e258aa842c2f606",
+      "bytes": 10795
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/SEED_PAIRED_DIFFERENCES.csv",
+      "sha256": "f9a8b53a5cdf85c254dc8dae4b579cd55b3228fe3a3358e2f4cefaf58e339aa4",
+      "bytes": 3533
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_WIN_FREQUENCY_AND_CONCENTRATION.csv",
+      "sha256": "9ff9e2b758add5c7b65bf4317f5a7a2ae381d452914b9a25cdc9b48da9d54abb",
+      "bytes": 1638
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/FROZEN_CITY_REGIONS.json",
+      "sha256": "e6cd5610cb8ef41c8a2b3f520f81cd42ef1eeb2aedaac2b88884ff0b3b58541c",
+      "bytes": 1648
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/protocol.json",
+      "sha256": "49f0315b5959d41db7879936a0e695af18eb34d402d532d06c7f05d7cf127dc4",
+      "bytes": 2321
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_CHECKPOINT_REGISTRY.csv",
+      "sha256": "bf560bc8b04937f034c6d693b495cc3521a140511e57abe45225dd10bc10acfe",
+      "bytes": 194759
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_PREDICTION_REGISTRY.csv",
+      "sha256": "cc33b0032d3d3e0aa2a84fe597de194902ee842eb8ea95c9257a5d894b61c3fa",
+      "bytes": 631627
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/T8_FINAL_METRICS.csv",
+      "sha256": "7d6864b99dbdae2fce0c5e563437184cb914feeb8ea6ec5977130fd39ee5d1a1",
+      "bytes": 6026
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_FINAL_METRICS.csv",
+      "sha256": "72eb87dfeb904fd49fe2b35dc5db494d60fe086818e3e8b6c94b66cdde997806",
+      "bytes": 672
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_PAIRED_CONTRASTS.csv",
+      "sha256": "4049c5021e41e4745b4c74b7e073c1fc6cbbe0bd468b9c09aa5bce39de8486c0",
+      "bytes": 1681
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/prepared/fold_0/MANIFEST.json",
+      "sha256": "06f4903b5b22adaf272d081a25d37e0e646e257f346d3eea458942e2a2f4f78d",
+      "bytes": 2629
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/T8_CITY_SUFFICIENT_STATISTICS.csv",
+      "sha256": "c9c26d06108914559a766736a77c6da576e389478d3fd31dcee5f46cf5a304d4",
+      "bytes": 72621
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_CITY_SUFFICIENT_STATISTICS.csv",
+      "sha256": "b766b5478d2a9221dfbac5721a1b5fee5e174d2d6d5f53dfa1c581216ebb5f64",
+      "bytes": 8960
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/POOLED_SEED_METRICS.csv",
+      "sha256": "21feb4f87096c7d55bf8acb3564406bb9812043a253927119d5dc8475989da6f",
+      "bytes": 3378
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/CITY_SUFFICIENT_STATISTICS.csv",
+      "sha256": "86a34d18fe2274feec45e380f0321e6a8a7513b6588963ef630c89ef7724ccea",
+      "bytes": 80054
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/PAIRED_SUMMARY.csv",
+      "sha256": "268799a42605597d86e420345496bc010be16d390085350ece4087409565db81",
+      "bytes": 2570
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/POOLED_SEED_METRICS.csv",
+      "sha256": "0779c479ae1b8d49f8854e8ae13365756651b56d089a5ba12036ba70a9eb53cd",
+      "bytes": 5197
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/CITY_SUFFICIENT_STATISTICS.csv",
+      "sha256": "66c2daf643f789dd85266225c1597d91d98cc71895f21b7aa3c84b381ff6281d",
+      "bytes": 124902
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/CITY_CLUSTER_UNCERTAINTY.csv",
+      "sha256": "7bc40650fee2ac2c829c8e24d18803943c98a9e61999c95d195ade150f6abd68",
+      "bytes": 7990
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/POOLED_SEED_METRICS.csv",
+      "sha256": "eb0b7a712bffe95cf6c83e9b49472988c25626357c8d74ba9691b3e0e2877555",
+      "bytes": 3479
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/CITY_SUFFICIENT_STATISTICS.csv",
+      "sha256": "6e7330b49de7ae1ad573b2c88abddd80e4a5564c321adc5fc2f62b8554ff91d7",
+      "bytes": 83093
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/CITY_CLUSTER_UNCERTAINTY.csv",
+      "sha256": "ce4bb15e39c232cae7e8830f1910e0e27d1ea22a4e89ea60cdbc8cd376b65003",
+      "bytes": 4020
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/T8_CHECKPOINT_REGISTRY.csv",
+      "sha256": "c275c899cb9b122912b8453969c7d12b0e2c7d1a5190d51ed600bee029502b9a",
+      "bytes": 45372
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_CHECKPOINT_REGISTRY.csv",
+      "sha256": "5331db4d1ecec80af8c95114512538d52ca9bae2c6d04cf5e0ad00a4f0c44e41",
+      "bytes": 21770
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/CHECKPOINT_REGISTRY.csv",
+      "sha256": "f63a3068fe040153bc45ef09b1d8bddc0a06e99c534f379e151bffa1385d7961",
+      "bytes": 33726
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/A_CHECKPOINT_REGISTRY.csv",
+      "sha256": "ad5ccf729a46d6d1b782acc40442ae8631cccef3b72c70d6578452f7e2f27c52",
+      "bytes": 49866
+    },
+    {
+      "path": "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/CHECKPOINT_REGISTRY.csv",
+      "sha256": "a7a84746ec8a5a14b096511841727ff801671d3c32668866ff8039c3ce486d65",
+      "bytes": 34266
+    }
+  ],
+  "files": [
+    {
+      "file": "ablation_city_sufficient.csv",
+      "sha256": "188aac755d944561704b3577b0f7f4b97326176c1c8496a7d203c298da8f596a",
+      "bytes": 205672,
+      "rows": 2040,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/CITY_SUFFICIENT_STATISTICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/CITY_SUFFICIENT_STATISTICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/CITY_SUFFICIENT_STATISTICS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "ablation_model_means.csv",
+      "sha256": "71637bc5be5e9ba4b196cac00dbc2346fd475b486c25dd5e71138b26ea151ede",
+      "bytes": 2738,
+      "rows": 20,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/POOLED_SEED_METRICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/POOLED_SEED_METRICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/POOLED_SEED_METRICS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "ablation_results.csv",
+      "sha256": "d88b8181041803752bfe40696240779390cfcb7e2f595f6045402744951321f1",
+      "bytes": 11362,
+      "rows": 40,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/PAIRED_SUMMARY.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/CITY_CLUSTER_UNCERTAINTY.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/CITY_CLUSTER_UNCERTAINTY.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "ablation_run_registry.csv",
+      "sha256": "92a77face310ebd51cd501fa999c5fdccf9886a1a446332fd013375c054da481",
+      "bytes": 34312,
+      "rows": 300,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/T8_CHECKPOINT_REGISTRY.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_CHECKPOINT_REGISTRY.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/CHECKPOINT_REGISTRY.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/A_CHECKPOINT_REGISTRY.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/CHECKPOINT_REGISTRY.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Identity/hash metadata only. All private filesystem paths and device identities removed; no referenced weights or predictions distributed."
+    },
+    {
+      "file": "ablation_seed_metrics.csv",
+      "sha256": "67deae22e3f4544ea3ddfc52eeadc662bdab8d9289ca8333ea2f89ac75c6ba21",
+      "bytes": 7033,
+      "rows": 60,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/POOLED_SEED_METRICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/POOLED_SEED_METRICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/POOLED_SEED_METRICS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "capacity_city_sufficient.csv",
+      "sha256": "755f22e7b9485c0f9153476709a74b9a47435d93e2627b5e5b859a463de36075",
+      "bytes": 90328,
+      "rows": 1020,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/T8_CITY_SUFFICIENT_STATISTICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/prepared/fold_0/MANIFEST.json"
+      ],
+      "training_seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "One frozen training seed with all ten folds; no seed SD. Pool legal fold-exposure SSE/SAE/n before physical-unit metric."
+    },
+    {
+      "file": "capacity_results.csv",
+      "sha256": "7d6864b99dbdae2fce0c5e563437184cb914feeb8ea6ec5977130fd39ee5d1a1",
+      "bytes": 6026,
+      "rows": 30,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/T8_FINAL_METRICS.csv"
+      ],
+      "training_seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "One frozen training seed with all ten folds; no seed SD. Pool legal fold-exposure SSE/SAE/n before physical-unit metric."
+    },
+    {
+      "file": "city_concentration.csv",
+      "sha256": "9ff9e2b758add5c7b65bf4317f5a7a2ae381d452914b9a25cdc9b48da9d54abb",
+      "bytes": 1638,
+      "rows": 6,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_WIN_FREQUENCY_AND_CONCENTRATION.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "city_level_summary.csv",
+      "sha256": "07ada3c03ca92e6a1745c7860da9ce2027a19d59f4a19480303c0e22b433eacc",
+      "bytes": 102887,
+      "rows": 220,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_LEVEL_COMPARISONS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "city_regions.json",
+      "sha256": "e6cd5610cb8ef41c8a2b3f520f81cd42ef1eeb2aedaac2b88884ff0b3b58541c",
+      "bytes": 1648,
+      "rows": null,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/FROZEN_CITY_REGIONS.json"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "city_seed_comparisons.csv",
+      "sha256": "5fcb096a4af4f9ddffa2b0b8094d0879724fe9971a1577ebd935944710fba21d",
+      "bytes": 157072,
+      "rows": 660,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_SEED_COMPARISONS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "city_win_counts.csv",
+      "sha256": "b28b1139da7ad925f2c91b94c94f498850668a7db145c49b7c90e12b5df35bc0",
+      "bytes": 1394,
+      "rows": 18,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_WIN_COUNTS_BY_SEED.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "main_benchmark.csv",
+      "sha256": "0bc4702baa81abfb60eab2a246cfde3f10df49eea05c223c8bc6fed791f852c5",
+      "bytes": 6376,
+      "rows": 40,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_MAIN_TABLE.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk. Persistence is deterministic, has no training seed or invented SD."
+    },
+    {
+      "file": "main_city_sufficient.csv",
+      "sha256": "be6a1fe58bc320820bdb9c1bb56dedd64384486a40d4b7c7ff101da6df351501",
+      "bytes": 153890,
+      "rows": 1170,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/CITY_SUFFICIENT_STATISTICS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "main_fold_exposures.csv",
+      "sha256": "70ed28c07c55297bb1f5ec0c91397bc1939c40ed06941a417cb92e971c43fadc",
+      "bytes": 24276,
+      "rows": 330,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/EXPOSURE_SUFFICIENT_STATISTICS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "main_run_registry.csv",
+      "sha256": "37f272475abab457ec9f730486f9728e95cc667310933164d041d958fa527977",
+      "bytes": 92208,
+      "rows": 210,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_CHECKPOINT_REGISTRY.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Identity/hash metadata only. All private filesystem paths and device identities removed; no referenced weights or predictions distributed."
+    },
+    {
+      "file": "main_seed_metrics.csv",
+      "sha256": "36f824de7d48e8abefab6272b8816c4f56c898e07cf1ff02197245fcd5a27916",
+      "bytes": 15616,
+      "rows": 105,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_SEED_STATISTICS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "meteorological_city_sufficient.csv",
+      "sha256": "ede9e6127d1d815a828f17a410509b3f8cc604e62ce3cfa98d3ce6b76bedd02f",
+      "bytes": 11457,
+      "rows": 150,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_CITY_SUFFICIENT_STATISTICS.csv",
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/prepared/fold_0/MANIFEST.json"
+      ],
+      "training_seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "One frozen training seed with all ten folds; no seed SD. Pool legal fold-exposure SSE/SAE/n before physical-unit metric."
+    },
+    {
+      "file": "meteorological_paired.csv",
+      "sha256": "4049c5021e41e4745b4c74b7e073c1fc6cbbe0bd468b9c09aa5bce39de8486c0",
+      "bytes": 1681,
+      "rows": 6,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_PAIRED_CONTRASTS.csv"
+      ],
+      "training_seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "One frozen training seed with all ten folds; no seed SD. Pool legal fold-exposure SSE/SAE/n before physical-unit metric."
+    },
+    {
+      "file": "meteorological_results.csv",
+      "sha256": "72eb87dfeb904fd49fe2b35dc5db494d60fe086818e3e8b6c94b66cdde997806",
+      "bytes": 672,
+      "rows": 3,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/ABC_FINAL_METRICS.csv"
+      ],
+      "training_seeds": [
+        20260826
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "One frozen training seed with all ten folds; no seed SD. Pool legal fold-exposure SSE/SAE/n before physical-unit metric."
+    },
+    {
+      "file": "paired_statistics.csv",
+      "sha256": "e1f2c9c2f32140ccdabbc80ac622381c14e82f421a0a5eaa415a7f1b69e1385f",
+      "bytes": 5520,
+      "rows": 12,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/MAIN_BASELINE_PAIRED_RESULTS.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "physical_exposures.csv",
+      "sha256": "7ae876c2231db9447b9c138f99b7647811c5f95afc8481a61e258aa842c2f606",
+      "bytes": 10795,
+      "rows": 170,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/PHYSICAL_EXPOSURE_AUDIT.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "prediction_hash_registry.csv",
+      "sha256": "9746002407e480b3cea2c7d67570ae90366015354ed8da1a7f7a515677a6546a",
+      "bytes": 209566,
+      "rows": 1055,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_PREDICTION_REGISTRY.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Identity/hash metadata only. All private filesystem paths and device identities removed; no referenced weights or predictions distributed."
+    },
+    {
+      "file": "regional_summary.csv",
+      "sha256": "e9b3a9a5d0e709bc55448b79ec53cdca26966f764b82e5d71f841c302c798751",
+      "bytes": 7270,
+      "rows": 22,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/REGIONAL_DESCRIPTIVE.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "seed_paired_differences.csv",
+      "sha256": "f9a8b53a5cdf85c254dc8dae4b579cd55b3228fe3a3358e2f4cefaf58e339aa4",
+      "bytes": 3533,
+      "rows": 18,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/SEED_PAIRED_DIFFERENCES.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "statistical_protocol.json",
+      "sha256": "0a98377b008b45d79013d8d1b80a92201e67d4af94600cc65334d7d59100822e",
+      "bytes": 2146,
+      "rows": null,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/main_baseline_paired_statistics_20261025/protocol.json"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Frozen legal fold-exposure SSE/SAE/n pools within each seed; sample SD across complete seeds only. City summaries are descriptive, not a replacement for pooled risk."
+    },
+    {
+      "file": "baseline_ranks.csv",
+      "sha256": "855bc3ea3b0e572de785c6e3c104473ad30996fe166dac48509bc03f0bb8904d",
+      "bytes": 3698,
+      "rows": 30,
+      "source_files": [
+        "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/FINAL_MAIN_TABLE.csv"
+      ],
+      "training_seeds": [
+        20260826,
+        20260827,
+        20260828
+      ],
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "aggregation": "Rank six trainable baselines by each scenario mean pooled RMSE; descriptive, not significance."
+    }
+  ],
+  "release_scope": "Author-generated aggregate metrics and non-invertible city/seed/fold SSE-SAE-count summaries; no observation rows, input features, prediction records, checkpoints or server configuration. Candidate inclusion remains subject to author rights approval; does not relicense source datasets.",
+  "publication_rights_status": "Local candidate only; owner/institution permission and aggregate-result redistribution terms require final author approval. Inclusion is not a claim of a source-dataset redistribution license."
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "runtime_torch": "2.11.0.dev20260126+cu128",
+  "cuda_initialized": false,
+  "rows": [
+    {
+      "model": "phystok",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 27403141
+    },
+    {
+      "model": "dlinear",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 146
+    },
+    {
+      "model": "informer",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 2945281
+    },
+    {
+      "model": "patchtst",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 2378897
+    },
+    {
+      "model": "itransformer",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 2649601
+    },
+    {
+      "model": "delayed_xview",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 27403141
+    },
+    {
+      "model": "strict_late_fusion",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 27409183
+    },
+    {
+      "model": "plain_state_flatten",
+      "initial_state_bitwise_equal": true,
+      "prediction_bitwise_equal": true,
+      "parameters": 27449733
+    }
+  ],
+  "scope": "Generated CPU tensors only; no research data or checkpoint. Exact state/forward parity with local frozen original definitions for redistributed models and three controls. TimeXer/XLinear excluded from candidate pending license.",
+  "model_tests": 7,
+  "experiment_tests": 4,
+  "total_component_tests": 11,
+  "component_test_runtime": "development environment; clean-environment aggregate test is recorded separately by the release owner"
+}

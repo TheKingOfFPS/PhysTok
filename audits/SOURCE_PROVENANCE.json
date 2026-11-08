@@ -1,0 +1,363 @@
+[
+  {
+    "inventory": "public_runner_provenance.json",
+    "records": [
+      {
+        "source": "icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/common.py",
+        "destination": "phystok/utils/common.py",
+        "sha256": "7fd54527435dce3e0748029ff46694f107b058ee03a438194543ce2c8b15f85c"
+      },
+      {
+        "source": "icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/config.py",
+        "destination": "phystok/training/config.py",
+        "sha256": "8695efb16140fe93745f569452604176fbb0a0f8e04ae82bfec8eda294eb76ef"
+      },
+      {
+        "source": "icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/budget.py",
+        "destination": "phystok/training/budget.py",
+        "sha256": "4be9788b6b681723a59c9809071c02aac77f3eed51376abb70f4ef8f062ef0c2"
+      },
+      {
+        "source": "icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/checkpoint.py",
+        "destination": "phystok/training/checkpoint.py",
+        "sha256": "34d989b0d3b10c119625fc1d3b1c69a2b3681c5e1620bfb3e746c1c6768fd1f7"
+      },
+      {
+        "source": "icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/engine.py",
+        "destination": "phystok/training/engine.py",
+        "sha256": "f9ad2245b6a4770e6f1acae11e904d01d5861993f3f6013812e46ff53fbbe306"
+      },
+      {
+        "source": "icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/metrics.py",
+        "destination": "phystok/evaluation/metrics.py",
+        "sha256": "8f83bb64b7a25d8147789af4f3e1167b2e9998355eacaa5b53b9cc9ab19b1314"
+      },
+      {
+        "source": "icde2027/benchmark_v2_implementation_20261017/execution_20261017/configs/frozen_recipe.json",
+        "destination": "configs/benchmark_v2.json",
+        "sha256": "0682cb10d3d564bba19c22d9071bc1f3972b7090ae0baea317de6b52f494b243"
+      }
+    ]
+  },
+  {
+    "inventory": "public_models_provenance.json",
+    "records": [
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/phystok/strong_vtt_model.py",
+        "source_sha256": "37741e14b752ad1ed978bc5e1447bb7c2d0eb49a623bcfc883c2dd6403a05cac",
+        "public_path": "phystok/models/vendor/phystok/strong_vtt_model.py",
+        "public_sha256": "37741e14b752ad1ed978bc5e1447bb7c2d0eb49a623bcfc883c2dd6403a05cac",
+        "changes": "exact architecture snapshot"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/informer/LICENSE",
+        "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "public_path": "phystok/models/vendor/informer/LICENSE",
+        "public_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/informer/utils/masking.py",
+        "source_sha256": "33862345a8e9297b4214614e16c86829279953506319da4ffe33a476ef047c28",
+        "public_path": "phystok/models/vendor/informer/utils/masking.py",
+        "public_sha256": "33862345a8e9297b4214614e16c86829279953506319da4ffe33a476ef047c28",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/informer/models/embed.py",
+        "source_sha256": "d7f4f06370c640b56acab9df4092988f7711afb33cc64e868dc080286a0c4b9d",
+        "public_path": "phystok/models/vendor/informer/models/embed.py",
+        "public_sha256": "d7f4f06370c640b56acab9df4092988f7711afb33cc64e868dc080286a0c4b9d",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/informer/models/encoder.py",
+        "source_sha256": "bfd72a16e8bf7b2b36bcab47d198b885863e4b2ebfa5707f619c31078bc87737",
+        "public_path": "phystok/models/vendor/informer/models/encoder.py",
+        "public_sha256": "bfd72a16e8bf7b2b36bcab47d198b885863e4b2ebfa5707f619c31078bc87737",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/informer/models/attn.py",
+        "source_sha256": "e97c5819abf04083172aa80c8b9b489d9a61d1e1505e2228a94ef3ce10ae58e9",
+        "public_path": "phystok/models/vendor/informer/models/attn.py",
+        "public_sha256": "8f06de3f4d23651ada071f77c13ec3cd90d9b2c6565c2ded4bf0993cb6ca2056",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/informer/models/model.py",
+        "source_sha256": "c143409e30d89f4d66a081b7ee00ab8ca913fa297d53ad4ae403ec9b1384c661",
+        "public_path": "phystok/models/vendor/informer/models/model.py",
+        "public_sha256": "d7977d73a57d03efe2df089a568455af10e0f94fd5edf2d6b83b809aa100677d",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/informer/models/decoder.py",
+        "source_sha256": "ec2ebb81ba8d5400c06cb7db5ae2d93bb95dd04b2afbc33b5cefa284afb9a9df",
+        "public_path": "phystok/models/vendor/informer/models/decoder.py",
+        "public_sha256": "ec2ebb81ba8d5400c06cb7db5ae2d93bb95dd04b2afbc33b5cefa284afb9a9df",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/patchtst/LICENSE",
+        "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "public_path": "phystok/models/vendor/patchtst/LICENSE",
+        "public_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/patchtst/layers/RevIN.py",
+        "source_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+        "public_path": "phystok/models/vendor/patchtst/layers/RevIN.py",
+        "public_sha256": "e64c0ccded9228b347134e7368420d3fb10f70c75145b5ff2d8bdd8c3af59df6",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/patchtst/layers/PatchTST_layers.py",
+        "source_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+        "public_path": "phystok/models/vendor/patchtst/layers/PatchTST_layers.py",
+        "public_sha256": "21c06c70a90c60ee2a269b5c600c702834dea22cdfd72915e6b0f8b4a28db3f6",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/patchtst/layers/PatchTST_backbone.py",
+        "source_sha256": "0059777f4a2935c1320be4f2f9d3e7ed4d0a6d7527e69eb0655bf8478239ccd8",
+        "public_path": "phystok/models/vendor/patchtst/layers/PatchTST_backbone.py",
+        "public_sha256": "dab677c2dff8a0e03ea56e35e7e7c787e02e6b3b9e05efdbf88614cfe167d9db",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/itransformer/LICENSE",
+        "source_sha256": "29d2a4c09fa577780522219dc248466977f77cd420354c5e9a0e86550be2b849",
+        "public_path": "phystok/models/vendor/itransformer/LICENSE",
+        "public_sha256": "29d2a4c09fa577780522219dc248466977f77cd420354c5e9a0e86550be2b849",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/itransformer/utils/masking.py",
+        "source_sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+        "public_path": "phystok/models/vendor/itransformer/utils/masking.py",
+        "public_sha256": "02f453e52cfaec65e34132923add80e7132f188706680fa86d7bd884976e09ef",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/itransformer/model/iTransformer.py",
+        "source_sha256": "0b5c2afc80a6c84c4d4a5f7f05a7ddeeb93bd204b47a67071c58b423e2b6240b",
+        "public_path": "phystok/models/vendor/itransformer/model/iTransformer.py",
+        "public_sha256": "99dae781f559fcd96778af846a1867d569a5483f09fcb417c277e02dfd60760a",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/itransformer/layers/SelfAttention_Family.py",
+        "source_sha256": "4645d3457b5a40fccaa6dc418713b1fdf5867c34fa950d7a9305810253d80c37",
+        "public_path": "phystok/models/vendor/itransformer/layers/SelfAttention_Family.py",
+        "public_sha256": "f273d54dadc8c24544e15bd8b931f648bcfebad667c1196fed218a891782e2d6",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/itransformer/layers/Transformer_EncDec.py",
+        "source_sha256": "985c31f4ae187b08afaa9663dc960a40544b2ec33ab55389ceab3930edc1ce02",
+        "public_path": "phystok/models/vendor/itransformer/layers/Transformer_EncDec.py",
+        "public_sha256": "985c31f4ae187b08afaa9663dc960a40544b2ec33ab55389ceab3930edc1ce02",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/vendor/itransformer/layers/Embed.py",
+        "source_sha256": "2de7e5049a696d320a23a8bdb6e08e823cf7fa3f246a0a49555fcd729c5c8398",
+        "public_path": "phystok/models/vendor/itransformer/layers/Embed.py",
+        "public_sha256": "2de7e5049a696d320a23a8bdb6e08e823cf7fa3f246a0a49555fcd729c5c8398",
+        "changes": "namespace-only public import relocation; modified-file notice where imports changed"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/models.py",
+        "source_sha256": "b24ed3330215036b22c630d4a6b185ca3f55055b062655051be5c27cce925576",
+        "public_path": "phystok/models/adapters.py",
+        "public_sha256": "7bc13ee8bf984b795fd116ef0ca5559c6706e49d1b46c39a92b123bc226b606f",
+        "changes": "public namespace; root utility import; explicit Small-only capacity flag; external baseline availability check. Frozen Full and baseline mathematics preserved."
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/delayed_xview_control_20261021/src/delayed_xview/model.py",
+        "source_sha256": "e556ef98c268c4a532b49ee639360df5affc26943ddb3d50e293b1a8c59faff4",
+        "public_path": "phystok/models/delayed_xview.py",
+        "public_sha256": "1db7f90a72722da315f93c8196cbf4b52eff34dfe4992b086989e8c69b9eeb6a",
+        "changes": "namespace-only imports; control mathematics and initialization order unchanged"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/strict_late_fusion_20261023/src/strict_late_fusion/model.py",
+        "source_sha256": "c003c5c7bc23cef3ea50e30842bfef32aa45edaee1d5a65d12f5493601172240",
+        "public_path": "phystok/models/strict_late_fusion.py",
+        "public_sha256": "fe7d540d6123cac905535bf095c7382042d7daeeaddc578fbb91d7345f0b773c",
+        "changes": "namespace-only imports; control mathematics and initialization order unchanged"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/plain_state_flatten_control_20261024/src/plain_state_flatten/model.py",
+        "source_sha256": "68da05b2fa23441cb8d231b220bf81186b9afda2c6cdf0835c3d65b78de12fe5",
+        "public_path": "phystok/models/plain_state_flatten.py",
+        "public_sha256": "c7f5101322bb20eb3921dd2f187d6f9c1df62c95243df74b4f2ddb2decb82b5c",
+        "changes": "namespace-only imports; control mathematics and initialization order unchanged"
+      },
+      {
+        "source": "paper/icde2027/benchmark_v2_implementation_20261017/ablation_v2_4090_20261019/execution_r2/src/ablation_v2/data.py",
+        "source_sha256": "b0e41560d37e6389dbe1e46e3b318d1fe91985c4c505e7ff3d96824f7b606fc7",
+        "public_path": "phystok/experiments/weather.py",
+        "public_sha256": "d8ace08bb10e97c714188fe341156fba32a7f7f3861c7ae6b4455e6a3f75d1aa",
+        "changes": "namespace and explicit contract/prepared-root configuration; remove unavailable private legacy-array comparisons, preserving rebuild formulas and scoped reads"
+      }
+    ]
+  },
+  {
+    "inventory": "public_data_provenance.json",
+    "records": [
+      {
+        "source_relative_path": "07_scripts/data_pipeline/acquire_era5_bulk.py",
+        "source_sha256": "f5d55e0c95b5a495fa6148340a435a82a99b3f724d74ddbf0021a22c3c146a44",
+        "public_path": "phystok/data/pipeline/acquire_era5_bulk.py",
+        "public_sha256": "20d41ee22d8f1df817cb851a8a9fb0f64ff2e5d619ae686354501f21360bafb3",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/02_build_era5_canonical.py",
+        "source_sha256": "32c87d007458e494b1ba5227317359227ebf7a1063dd7afb81500cc9ea8ad1b2",
+        "public_path": "phystok/data/pipeline/02_build_era5_canonical.py",
+        "public_sha256": "e825128d71783db91a5282b9c47699743706f7d3a32e5caf0e206dfbf5c8b495",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/03_build_era5_derived.py",
+        "source_sha256": "32348e3f7ef5456abe5e3b5786035c5d5ade53b18ccbcf236cc4205b5ac5e98c",
+        "public_path": "phystok/data/pipeline/03_build_era5_derived.py",
+        "public_sha256": "e8dc7a2f69c6a340d40fd9380958f90ea57054eed9038aeb7f3dfe4241b9132c",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/05_extract_city_meteorology.py",
+        "source_sha256": "91fda012103532ada65c0584199d87bf2cff85041c18a76448fdd5320d957098",
+        "public_path": "phystok/data/pipeline/05_extract_city_meteorology.py",
+        "public_sha256": "cc02ed7ddbbc6e0e57e9fbb8e6d25755bac5f8be7390b8af8c6a8fa957c01f06",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/audit_cnemc_station_registry_and_50city_roster.py",
+        "source_sha256": "41686008d3b97cf83bacbd11459f7e84f3c6342044071ebaf819f7d4cfca7a9d",
+        "public_path": "phystok/data/pipeline/audit_cnemc_station_registry_and_50city_roster.py",
+        "public_sha256": "41686008d3b97cf83bacbd11459f7e84f3c6342044071ebaf819f7d4cfca7a9d",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/audit_cnemc_station_lifecycle_validity_sensitivity.py",
+        "source_sha256": "f7448e9023a38028e5e6be86ea35abd2992f9e7e355ed839e383069a675b083f",
+        "public_path": "phystok/data/pipeline/audit_cnemc_station_lifecycle_validity_sensitivity.py",
+        "public_sha256": "f7448e9023a38028e5e6be86ea35abd2992f9e7e355ed839e383069a675b083f",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/build_cnemc_city_air_quality_canonical.py",
+        "source_sha256": "86fc1270120f8ad0f15dfb70044505b9cc31a6528767a26443bea87f39eba4fe",
+        "public_path": "phystok/data/pipeline/build_cnemc_city_air_quality_canonical.py",
+        "public_sha256": "86fc1270120f8ad0f15dfb70044505b9cc31a6528767a26443bea87f39eba4fe",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/06_build_observed_era5_merged.py",
+        "source_sha256": "8070e54a5ec88c71967295dc5a92755843be346f970f00270093b410ec7bc46e",
+        "public_path": "phystok/data/pipeline/06_build_observed_era5_merged.py",
+        "public_sha256": "8070e54a5ec88c71967295dc5a92755843be346f970f00270093b410ec7bc46e",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/07_build_pm25_24h_task_index.py",
+        "source_sha256": "9009226926232668d48b62edf0669f737a9ac27a1ec38e84d441aa2f58101aff",
+        "public_path": "phystok/data/pipeline/07_build_pm25_24h_task_index.py",
+        "public_sha256": "9009226926232668d48b62edf0669f737a9ac27a1ec38e84d441aa2f58101aff",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/08_bind_observed_task_splits.py",
+        "source_sha256": "e7ae9d74fe4fe7296564ccc242df98bd259408116c8cbd59abee9bb10fe8b653",
+        "public_path": "phystok/data/pipeline/08_bind_observed_task_splits.py",
+        "public_sha256": "e7ae9d74fe4fe7296564ccc242df98bd259408116c8cbd59abee9bb10fe8b653",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/09_build_observed_issue_time_feature_bank.py",
+        "source_sha256": "d996da852ad2b0c46716a8d6e94b2d414e41942b76fb44ca80fd8a895ae7f9b0",
+        "public_path": "phystok/data/pipeline/09_build_observed_issue_time_feature_bank.py",
+        "public_sha256": "d996da852ad2b0c46716a8d6e94b2d414e41942b76fb44ca80fd8a895ae7f9b0",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/10_build_observed_fold_local_artifacts.py",
+        "source_sha256": "7f3002c2cf65cc805a4dd839e1ab95bd0a74a7358045171f72e74f9a87595325",
+        "public_path": "phystok/data/pipeline/10_build_observed_fold_local_artifacts.py",
+        "public_sha256": "7f3002c2cf65cc805a4dd839e1ab95bd0a74a7358045171f72e74f9a87595325",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/audit_observed_issue_time_feature_bank.py",
+        "source_sha256": "97014499c1e6c9b3c324c9fd83e2dfa66e47b6cdca4f7d91fd02c9efb0c3cc57",
+        "public_path": "phystok/data/pipeline/audit_observed_issue_time_feature_bank.py",
+        "public_sha256": "97014499c1e6c9b3c324c9fd83e2dfa66e47b6cdca4f7d91fd02c9efb0c3cc57",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/data_pipeline/audit_observed_fold_local_artifacts.py",
+        "source_sha256": "ea67834088df3fc653845fcda9e2e90b1628ca71e7fe9083d15ba877263011a8",
+        "public_path": "phystok/data/pipeline/audit_observed_fold_local_artifacts.py",
+        "public_sha256": "ea67834088df3fc653845fcda9e2e90b1628ca71e7fe9083d15ba877263011a8",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/external_validation/75a_build_central_china_external_cnemc.py",
+        "source_sha256": "41e22b09e76829893fdc871d262dcd527b6ae0b008f44efac6ce962aba31f7df",
+        "public_path": "phystok/data/pipeline/75a_build_central_china_external_cnemc.py",
+        "public_sha256": "41e22b09e76829893fdc871d262dcd527b6ae0b008f44efac6ce962aba31f7df",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/external_validation/75b_acquire_central_china_external_era5.py",
+        "source_sha256": "60a44379413c041d6b01b952b06090e4ea30472d678b40489e16130c0729f69b",
+        "public_path": "phystok/data/pipeline/75b_acquire_central_china_external_era5.py",
+        "public_sha256": "414398c86ad45192d66063c73499f428991e8e577a55969d71791619032d2bf3",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "07_scripts/external_validation/76_build_central_china_external_frozen_inputs.py",
+        "source_sha256": "9c58e605fc2c3ab2bce0288f720149a3270a85ae0860264a502ac843a6787cd1",
+        "public_path": "phystok/data/pipeline/76_build_central_china_external_frozen_inputs.py",
+        "public_sha256": "9c58e605fc2c3ab2bce0288f720149a3270a85ae0860264a502ac843a6787cd1",
+        "adaptation": "Only implicit private-project default changed to current working directory; numerical formulas and gates preserved."
+      },
+      {
+        "source_relative_path": "05_manifests/cnemc_station_qc_policy_v1.json",
+        "source_sha256": "b8e4b8e8d1a74b8a988e365d39a078c01984e2a2a7a122d236d99505eda88dc7",
+        "public_path": "data/metadata/cnemc_station_qc_policy_v1.json",
+        "adaptation": "Removed internal file provenance and empirical retention/count summaries; retained pre-specified scientific rules."
+      },
+      {
+        "source_relative_path": "05_manifests/benchmark_validity_policy_v1.json",
+        "source_sha256": "4a51425c4ac251ec5b03cdeb87ac68676e786445cde52a63acee1cf82510ec5f",
+        "public_path": "data/metadata/benchmark_validity_policy_v1.json",
+        "adaptation": "Removed internal file provenance and empirical retention/count summaries; retained pre-specified scientific rules."
+      },
+      {
+        "source_relative_path": "05_manifests/model_sample_eligibility_policy_v1.json",
+        "source_sha256": "dc25625656217f3dcda75bf873b59e317c9e69a3dc9d8bb9a642d32a5a07d98c",
+        "public_path": "data/metadata/model_sample_eligibility_policy_v1.json",
+        "adaptation": "Removed internal file provenance and empirical retention/count summaries; retained pre-specified scientific rules."
+      },
+      {
+        "source_relative_path": "05_manifests/external_central_china_protocol_v1.json",
+        "source_sha256": "bfe3d8b77fb17e19fdaa15eeed0e98b1715d3df36152b88448878e1e0d6434d4",
+        "public_path": "data/metadata/external_central_china_protocol_v1.json",
+        "adaptation": "Removed internal file provenance and empirical retention/count summaries; retained pre-specified scientific rules."
+      },
+      {
+        "source_relative_path": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/src/benchmark_v2/data.py",
+        "source_sha256": "2c9e8dae5957c16e170a525fba521d09717b60cd71a51646279c2225d2319871",
+        "public_path": "phystok/data/loader.py",
+        "public_sha256": "35fc2791cc4106d6b2d7c5ac6b97deef2d1ecd4f1a35c2ea85ccbbc55947866e",
+        "adaptation": "Common import routing, actionable unbound-schema error, and actual task-file SHA in the metadata cache key. Frozen numeric loading/window/transform algorithms preserved."
+      }
+    ]
+  }
+]

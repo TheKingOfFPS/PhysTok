@@ -1,0 +1,91 @@
+{
+  "files": [
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "models/TimeXer.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/models/TimeXer.py",
+      "original_sha256": "b334d7869544d0a5de7a35501d0342d7bd0be4ebda06ccc045855a42819728c0",
+      "runtime_sha256": "5084a64d7e57a6182154a8be89597d837b0ecb9161e84b423d45cecf23d2c9e3",
+      "modifications": "absolute import namespace only; algebraically identical out-of-place input normalization to support input gradients (CPU acceptance found upstream in-place autograd version conflict)",
+      "public_runtime_sha256": "9a83e5ef5e642e2605d28aa65d617b980c0a82406b23c901cedcb6e428375e15",
+      "replacements": [
+        {
+          "old": "from layers.SelfAttention_Family import",
+          "new": "from phystok.models.vendor.timexer.layers.SelfAttention_Family import"
+        },
+        {
+          "old": "from layers.Embed import",
+          "new": "from phystok.models.vendor.timexer.layers.Embed import"
+        },
+        {
+          "old": "x_enc /= stdev",
+          "new": "x_enc = x_enc / stdev"
+        }
+      ]
+    },
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "layers/Embed.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/layers/Embed.py",
+      "original_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "runtime_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "modifications": "none",
+      "public_runtime_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "replacements": []
+    },
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "layers/SelfAttention_Family.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/layers/SelfAttention_Family.py",
+      "original_sha256": "6f6592aed0753e342fc04c01db70528c2eb191eeb067cd5fd4c8d348fddcb794",
+      "runtime_sha256": "cd394da0702ae8a4cde0ef59e148cf419b632f8b9619f5bcbea6ff0f95323448",
+      "modifications": "absolute import namespace only; guard unused optional Reformer import, no active-core math changes",
+      "public_runtime_sha256": "f29d3a23abafc879de1a3ceeb8ab4dd9963234dea200dc9a408f6d626723f15d",
+      "replacements": [
+        {
+          "old": "from utils.masking import",
+          "new": "from phystok.models.vendor.timexer.utils.masking import"
+        },
+        {
+          "old": "from reformer_pytorch import LSHSelfAttention",
+          "new": "try:\n    from reformer_pytorch import LSHSelfAttention\nexcept ImportError:\n    class LSHSelfAttention:\n        def __init__(self, *args, **kwargs):\n            raise ImportError(\"Optional Reformer is not part of Benchmark V2; install separately only if explicitly enabled\")"
+        }
+      ]
+    },
+    {
+      "model": "timexer",
+      "repository": "thuml/TimeXer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "upstream_path": "utils/masking.py",
+      "url": "https://raw.githubusercontent.com/thuml/TimeXer/76011909357972bd55a27adba2e1be994d81b327/utils/masking.py",
+      "original_sha256": "5976ac3dc84915d0d294c1761573bc18434751f29ec421bcca5a9b280de46bae",
+      "runtime_sha256": "5976ac3dc84915d0d294c1761573bc18434751f29ec421bcca5a9b280de46bae",
+      "modifications": "none",
+      "public_runtime_sha256": "5976ac3dc84915d0d294c1761573bc18434751f29ec421bcca5a9b280de46bae",
+      "replacements": []
+    },
+    {
+      "model": "xlinear",
+      "repository": "Zaiwen/XLinear",
+      "commit": "af500c5478ef2a69ad36d04ffcdfe04aae4483e2",
+      "upstream_path": "models/XLinear.py",
+      "url": "https://raw.githubusercontent.com/Zaiwen/XLinear/af500c5478ef2a69ad36d04ffcdfe04aae4483e2/models/XLinear.py",
+      "original_sha256": "28b65f44f2bdbb63291beea32c6ee11b7ef5ed64c23ae89d70986f08c7c350f4",
+      "runtime_sha256": "a73eb5079d54bd59944805d2443f78ed47e5f0fc97bab6cf198ec8e921133628",
+      "modifications": "none; algebraically identical out-of-place input normalization to support input gradients (CPU acceptance found upstream in-place autograd version conflict)",
+      "public_runtime_sha256": "a73eb5079d54bd59944805d2443f78ed47e5f0fc97bab6cf198ec8e921133628",
+      "replacements": [
+        {
+          "old": "x_enc /= stdev",
+          "new": "x_enc = x_enc / stdev"
+        }
+      ]
+    }
+  ]
+}

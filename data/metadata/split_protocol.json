@@ -1,0 +1,147 @@
+{
+  "protocol_id": "national_pm25_ood_split_v1",
+  "protocol_version": 1,
+  "created_at_utc": "2026-08-26T11:38:23.538894+00:00",
+  "scientific_task": {
+    "primary_protocol": "cross_city_cross_validation",
+    "forecast_horizon_hours": 24,
+    "forecast_target": "single-point PM2.5 at t+24h",
+    "statement": "Train on source cities over 2023-2024 and evaluate city-level spatial OOD in covered years, temporal OOD on seen cities in 2025, and joint spatial-temporal OOD on unseen cities in 2025.",
+    "loro_status": "Optional extreme OOD stress test; not the primary protocol."
+  },
+  "temporal_semantics": {
+    "covered_development_years": [
+      2023,
+      2024
+    ],
+    "future_holdout_years": [
+      2025
+    ],
+    "history_buffer": {
+      "period": "2022-12",
+      "role": "causal history/context only",
+      "may_be_target": false,
+      "may_fit_model_weights": false,
+      "may_fit_data_dependent_transforms": false
+    },
+    "future_policy": "2025 is sealed from fitting, transform fitting, early stopping, model selection, hyperparameter selection, and target-aware feature discovery."
+  },
+  "fold_semantics": {
+    "fold_count": 10,
+    "cities_total": 50,
+    "per_fold": {
+      "train_cities": 40,
+      "validation_cities": 5,
+      "test_cities": 5
+    },
+    "per_region_per_fold": {
+      "train": 8,
+      "validation": 1,
+      "test": 1
+    },
+    "coverage": {
+      "every_city_test_exactly_once": true,
+      "every_city_validation_exactly_once": true
+    },
+    "rationale": "Each fold keeps 80% of cities for fitting while preserving one validation and one test city from every region."
+  },
+  "fit_boundary": {
+    "model_weight_fit": "fold train cities x 2023-2024 only",
+    "data_dependent_transform_fit": "fold train cities x 2023-2024 only",
+    "validation_model_selection": "fold validation cities x 2023-2024 only",
+    "forbidden_for_fit_or_selection": [
+      "all fold test cities",
+      "all 2025 targets"
+    ],
+    "split_before_fit": true,
+    "scaler_definition": "All data-dependent distribution statistics are fold-local."
+  },
+  "formal_scenarios": {
+    "fit": {
+      "role": "fit",
+      "city_role": "train",
+      "years": [
+        2023,
+        2024
+      ],
+      "fit_model_weights": true,
+      "fit_data_dependent_transforms": true,
+      "allow_model_selection": false,
+      "final_evaluation": false
+    },
+    "validation": {
+      "role": "validation",
+      "city_role": "validation",
+      "years": [
+        2023,
+        2024
+      ],
+      "fit_model_weights": false,
+      "fit_data_dependent_transforms": false,
+      "allow_model_selection": true,
+      "final_evaluation": false
+    },
+    "spatial_ood": {
+      "role": "final_test",
+      "city_role": "test",
+      "years": [
+        2023,
+        2024
+      ],
+      "ood_axes": [
+        "city"
+      ],
+      "fit_model_weights": false,
+      "fit_data_dependent_transforms": false,
+      "allow_model_selection": false,
+      "final_evaluation": true
+    },
+    "temporal_ood": {
+      "role": "final_test",
+      "city_role": "train",
+      "years": [
+        2025
+      ],
+      "ood_axes": [
+        "time"
+      ],
+      "fit_model_weights": false,
+      "fit_data_dependent_transforms": false,
+      "allow_model_selection": false,
+      "final_evaluation": true
+    },
+    "joint_spatiotemporal_ood": {
+      "role": "final_test",
+      "city_role": "test",
+      "years": [
+        2025
+      ],
+      "ood_axes": [
+        "city",
+        "time"
+      ],
+      "fit_model_weights": false,
+      "fit_data_dependent_transforms": false,
+      "allow_model_selection": false,
+      "final_evaluation": true
+    }
+  },
+  "non_primary_reserved_data": {
+    "validation_cities_2025": {
+      "status": "sealed_not_primary",
+      "policy": "Do not inspect during ordinary development; optional post-freeze supplemental diagnostic only."
+    },
+    "train_cities_covered_years": {
+      "status": "source_domain_reference"
+    }
+  },
+  "feature_discovery_provenance": {
+    "status": "closed_before_formal_model_fitting",
+    "historical_rule": "Feature discovery used stricter train-city x 2023 discovery and validation-city x 2024 transfer checks. The frozen feature schema is not reopened by this split change."
+  },
+  "assignment_manifest": {
+    "path": "cross_city_fold_assignment.json",
+    "assignment_fingerprint_sha256": "5bf583dbb419d8f48d03f611f6775d3503521d35401d224083d939e488838c14"
+  },
+  "protocol_fingerprint_sha256": "8df9b31e9842a454c896b60abccb5012a96f389f1bc4685b2a67ab53812ba9aa"
+}

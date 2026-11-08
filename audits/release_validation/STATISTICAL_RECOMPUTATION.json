@@ -1,0 +1,636 @@
+{
+  "status": "PASS",
+  "checks": 5880,
+  "passed": 5880,
+  "mode": "bootstrap-all",
+  "main_family_size": 12,
+  "bootstrap_main_recomputed": true,
+  "bootstrap_ablations_recomputed": true,
+  "checked_main_models": 8,
+  "checked_training_seed_pools": 105,
+  "source_observations_or_predictions_verified": false,
+  "persistence_scope": "Frozen displayed metrics retained; no raw prediction or Persistence seed-statistic reconstruction from this package.",
+  "bootstrap_results": [
+    {
+      "baseline": "phystok",
+      "comparator": "timexer",
+      "scenario": "Spatial",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261025,
+      "family_size": 12,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 4.157369702127227,
+          "ci95_high": 5.444102391045993,
+          "family_ci_low": 3.8613001045045636,
+          "family_ci_high": 5.7388503106601325,
+          "family_interval_crosses_zero": false
+        },
+        "mae": {
+          "ci95_low": 2.317150400044058,
+          "ci95_high": 3.1304927063249504,
+          "family_ci_low": 2.134689368558054,
+          "family_ci_high": 3.314557489819704,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "phystok",
+      "comparator": "timexer",
+      "scenario": "Future",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261025,
+      "family_size": 12,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 0.07151818947787489,
+          "ci95_high": 0.5192070205940864,
+          "family_ci_low": -0.02517800154674939,
+          "family_ci_high": 0.618956922550246,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.16617514615393153,
+          "ci95_high": 0.10897178547671826,
+          "family_ci_low": -0.22847112334569303,
+          "family_ci_high": 0.17101488766574605,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "phystok",
+      "comparator": "timexer",
+      "scenario": "Joint",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261025,
+      "family_size": 12,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.16717352288901816,
+          "ci95_high": 0.3655299467366034,
+          "family_ci_low": -0.2848086856869688,
+          "family_ci_high": 0.486283532271539,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.4040313032165415,
+          "ci95_high": -0.040762015345781215,
+          "family_ci_low": -0.4929121437068392,
+          "family_ci_high": 0.037728262208483215,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "phystok",
+      "comparator": "timexer",
+      "scenario": "External-Spatial",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261025,
+      "family_size": 12,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.25694070771846467,
+          "ci95_high": 0.734932555835908,
+          "family_ci_low": -0.4967927913498243,
+          "family_ci_high": 0.9292976933497358,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.15950282296351462,
+          "ci95_high": 0.28430396329294894,
+          "family_ci_low": -0.2540082460974713,
+          "family_ci_high": 0.3801085392828767,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "phystok",
+      "comparator": "timexer",
+      "scenario": "External-Joint",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261025,
+      "family_size": 12,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.32002660463132954,
+          "ci95_high": 0.5697191352701872,
+          "family_ci_low": -0.48796844466669925,
+          "family_ci_high": 0.7712694106875669,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.5042483130945753,
+          "ci95_high": -0.011995382844917302,
+          "family_ci_low": -0.6079889398660405,
+          "family_ci_high": 0.09498354919950873,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "phystok",
+      "comparator": "informer",
+      "scenario": "Spatial",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261025,
+      "family_size": 12,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 1.2769661617355708,
+          "ci95_high": 1.63579226057621,
+          "family_ci_low": 1.2010069715543992,
+          "family_ci_high": 1.7256762616372279,
+          "family_interval_crosses_zero": false
+        },
+        "mae": {
+          "ci95_low": 0.7267842895821556,
+          "ci95_high": 1.0075752418298247,
+          "family_ci_low": 0.6667049304752567,
+          "family_ci_high": 1.0726217278273715,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "delayed_xview",
+      "scenario": "Spatial",
+      "cities": 50,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261021,
+      "family_size": null,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 0.07471816604128603,
+          "ci95_high": 0.18659104238416277
+        },
+        "mae": {
+          "ci95_low": 0.09183490508376363,
+          "ci95_high": 0.15820981317305147
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "delayed_xview",
+      "scenario": "Future",
+      "cities": 50,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261021,
+      "family_size": null,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.022515104201985905,
+          "ci95_high": 0.058488702884577415
+        },
+        "mae": {
+          "ci95_low": -0.054041627504534624,
+          "ci95_high": -0.01406514411919388
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "delayed_xview",
+      "scenario": "Joint",
+      "cities": 50,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261021,
+      "family_size": null,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.057598857446770804,
+          "ci95_high": 0.05618586823894276
+        },
+        "mae": {
+          "ci95_low": -0.060908661284670436,
+          "ci95_high": 0.024173087147830372
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "delayed_xview",
+      "scenario": "External-Spatial",
+      "cities": 10,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261021,
+      "family_size": null,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 0.004520402418823722,
+          "ci95_high": 0.11338924734992399
+        },
+        "mae": {
+          "ci95_low": 0.02591637482941396,
+          "ci95_high": 0.06566392988447259
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "delayed_xview",
+      "scenario": "External-Joint",
+      "cities": 10,
+      "bootstrap_reps": 10000,
+      "bootstrap_seed": 20261021,
+      "family_size": null,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.007078182346838938,
+          "ci95_high": 0.08892851825119408
+        },
+        "mae": {
+          "ci95_low": -0.0273663402133383,
+          "ci95_high": 0.039165119746123474
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "strict_late_fusion",
+      "scenario": "Spatial",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 0.17183135701940286,
+          "ci95_high": 0.3176845476669479,
+          "family_ci_low": 0.1333395702538395,
+          "family_ci_high": 0.3573117533847932,
+          "family_interval_crosses_zero": false
+        },
+        "mae": {
+          "ci95_low": 0.1615017976266778,
+          "ci95_high": 0.2580649380350168,
+          "family_ci_low": 0.1362061595736408,
+          "family_ci_high": 0.2837142248132986,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "delayed_xview",
+      "comparator": "strict_late_fusion",
+      "scenario": "Spatial",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 0.05426901341501968,
+          "ci95_high": 0.17211601958081665,
+          "family_ci_low": 0.022296691889557477,
+          "family_ci_high": 0.20573546593357978,
+          "family_interval_crosses_zero": false
+        },
+        "mae": {
+          "ci95_low": 0.044471476192862625,
+          "ci95_high": 0.123045409097864,
+          "family_ci_low": 0.023214000615325116,
+          "family_ci_high": 0.1432626601475549,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "strict_late_fusion",
+      "scenario": "Future",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.10082411787537705,
+          "ci95_high": 0.019997968118267175,
+          "family_ci_low": -0.1250791241598916,
+          "family_ci_high": 0.050327121656620726,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.056767183858527186,
+          "ci95_high": -0.009568016629346626,
+          "family_ci_low": -0.06843190671582658,
+          "family_ci_high": 0.0032746250734789874,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "delayed_xview",
+      "comparator": "strict_late_fusion",
+      "scenario": "Future",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.10018326497212489,
+          "ci95_high": -0.01861372928710181,
+          "family_ci_low": -0.11696465621728196,
+          "family_ci_high": 0.0032818695745223244,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.01621111894228117,
+          "ci95_high": 0.01802592705350858,
+          "family_ci_low": -0.0247998311739497,
+          "family_ci_high": 0.028100587631672953,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "strict_late_fusion",
+      "scenario": "Joint",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.15948769605399585,
+          "ci95_high": 0.026196830078627786,
+          "family_ci_low": -0.21946371562821265,
+          "family_ci_high": 0.06873981930249688,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.11636226346552313,
+          "ci95_high": 0.01497124059191589,
+          "family_ci_low": -0.15266462761634564,
+          "family_ci_high": 0.05028831306575083,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "delayed_xview",
+      "comparator": "strict_late_fusion",
+      "scenario": "Joint",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.13344069880149392,
+          "ci95_high": 0.006184056144019513,
+          "family_ci_low": -0.17494750522231392,
+          "family_ci_high": 0.04343138404530383,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.09280126699538441,
+          "ci95_high": 0.03011699998784169,
+          "family_ci_low": -0.124613396115488,
+          "family_ci_high": 0.06362337594710878,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "strict_late_fusion",
+      "scenario": "External-Spatial",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.007034995484578726,
+          "ci95_high": 0.17364530033622566,
+          "family_ci_low": -0.05481480586044176,
+          "family_ci_high": 0.213552236074143,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": 0.04644847137354752,
+          "ci95_high": 0.1117549696955944,
+          "family_ci_low": 0.030560680101806157,
+          "family_ci_high": 0.12861904258577658,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "delayed_xview",
+      "comparator": "strict_late_fusion",
+      "scenario": "External-Spatial",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.03332509365189414,
+          "ci95_high": 0.10006562317190391,
+          "family_ci_low": -0.05205486909106885,
+          "family_ci_high": 0.14486026186209008,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": 0.003939638419679541,
+          "ci95_high": 0.06690107769476772,
+          "family_ci_low": -0.005126810495353761,
+          "family_ci_high": 0.08878229763678708,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "strict_late_fusion",
+      "scenario": "External-Joint",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.16085958202144468,
+          "ci95_high": -0.01981339778611968,
+          "family_ci_low": -0.20524688517361428,
+          "family_ci_high": 0.0075769717380247265,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.09869366021736363,
+          "ci95_high": 0.016152805676955612,
+          "family_ci_low": -0.1337559042623487,
+          "family_ci_high": 0.03999004211622267,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "delayed_xview",
+      "comparator": "strict_late_fusion",
+      "scenario": "External-Joint",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261023,
+      "family_size": 20,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.17680301596589704,
+          "ci95_high": -0.07454339343358816,
+          "family_ci_low": -0.20331521089171872,
+          "family_ci_high": -0.045077366385860525,
+          "family_interval_crosses_zero": false
+        },
+        "mae": {
+          "ci95_low": -0.0856283727885643,
+          "ci95_high": 0.001261285148027509,
+          "family_ci_low": -0.10627606572083971,
+          "family_ci_high": 0.026561416955703694,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "plain_state_flatten",
+      "scenario": "Spatial",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261024,
+      "family_size": 10,
+      "metrics": {
+        "rmse": {
+          "ci95_low": 0.1190250309394897,
+          "ci95_high": 0.29660698782302886,
+          "family_ci_low": 0.08878357993845998,
+          "family_ci_high": 0.34180562047935054,
+          "family_interval_crosses_zero": false
+        },
+        "mae": {
+          "ci95_low": 0.040530855166601626,
+          "ci95_high": 0.10794596247459991,
+          "family_ci_low": 0.025411056463351234,
+          "family_ci_high": 0.12178420875438493,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "plain_state_flatten",
+      "scenario": "Future",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261024,
+      "family_size": 10,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.04213969988276869,
+          "ci95_high": 0.05019573594800915,
+          "family_ci_low": -0.06309338536355644,
+          "family_ci_high": 0.07005717977132357,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.06313084545066319,
+          "ci95_high": -0.013540862769705212,
+          "family_ci_low": -0.07353982258834153,
+          "family_ci_high": -0.0026813154984488136,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "plain_state_flatten",
+      "scenario": "Joint",
+      "cities": 50,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261024,
+      "family_size": 10,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.10689811362723092,
+          "ci95_high": 0.04103617217934829,
+          "family_ci_low": -0.1350661243587963,
+          "family_ci_high": 0.07657798551748053,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.11070200466286025,
+          "ci95_high": -0.016076176085555848,
+          "family_ci_low": -0.13252231275851742,
+          "family_ci_high": 0.003616361630174035,
+          "family_interval_crosses_zero": true
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "plain_state_flatten",
+      "scenario": "External-Spatial",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261024,
+      "family_size": 10,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.17892115487203122,
+          "ci95_high": 0.0005659829439489764,
+          "family_ci_low": -0.2186909522882969,
+          "family_ci_high": 0.03231068846792993,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.056480470234228974,
+          "ci95_high": -0.012611667334835394,
+          "family_ci_low": -0.06513027632348783,
+          "family_ci_high": -0.0032558552305162656,
+          "family_interval_crosses_zero": false
+        }
+      }
+    },
+    {
+      "baseline": "full",
+      "comparator": "plain_state_flatten",
+      "scenario": "External-Joint",
+      "cities": 10,
+      "bootstrap_reps": 100000,
+      "bootstrap_seed": 20261024,
+      "family_size": 10,
+      "metrics": {
+        "rmse": {
+          "ci95_low": -0.08739350429133215,
+          "ci95_high": 0.05061174757337857,
+          "family_ci_low": -0.11097032677318064,
+          "family_ci_high": 0.08111288633503004,
+          "family_interval_crosses_zero": true
+        },
+        "mae": {
+          "ci95_low": -0.09487803854764933,
+          "ci95_high": -0.023015857191352056,
+          "family_ci_low": -0.1103664551888252,
+          "family_ci_high": -0.009249082372833999,
+          "family_interval_crosses_zero": false
+        }
+      }
+    }
+  ],
+  "interpretation": "Aggregate arithmetic/uncertainty verification only. Intervals condition on observed seeds/cities/configuration; crossing zero is not equivalence."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": 5880,
+  "passed": 5880,
+  "mode": "bootstrap-all",
+  "main_family_size": 12,
+  "bootstrap_main_recomputed": true,
+  "bootstrap_ablations_recomputed": true,
+  "checked_main_models": 8,
+  "checked_training_seed_pools": 105,
+  "source_observations_or_predictions_verified": false,
+  "persistence_scope": "Frozen displayed metrics retained; no raw prediction or Persistence seed-statistic reconstruction from this package.",
+  "interpretation": "Aggregate arithmetic/uncertainty verification only. Intervals condition on observed seeds/cities/configuration; crossing zero is not equivalence.",
+  "statistics_code_sha256": {
+    "phystok/statistics/core.py": "565b3db37423fb230c7eece70f7f058818cdc94214611287106d609797c2e268",
+    "phystok/statistics/verification.py": "ce596e00ac6568d08b9416d41c68488c62daa1f4512b370ccfb985660d96454c",
+    "scripts/reproduce_tables.py": "7f450ea4f382f73e0d4dc8a5c46e6bd1d0b2623f9840f9ba1a425a1fd3e6e642",
+    "tests/test_statistics.py": "1770260e0f6f9014e18fe160bf3afcdc49321038f6e5a11d6cc1f6ecd7874344"
+  },
+  "results_manifest_sha256": "2fc9368b16a922d068b81e6aacc1097f34bbb2165958588d2cf240e106315fc2",
+  "tests": "10/10 statistics unit tests passed",
+  "verification_environment": "Python standard library and NumPy; CPU only. Clean full-project environment is audited separately."
+}

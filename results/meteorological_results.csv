@@ -1,0 +1,4 @@
+benchmark_id,experiment,configuration,seed,folds,scenario,deployed_parameters,n,sse,sae,rmse,mae,seed_sample_sd,uncertainty
+phystok_v2_ablation_seed26_20261019_r1,ABC,abc_b,20260826,10,Spatial,27403141,858714,422092278.75744843,11087660.97353208,22.17070136611386,12.911936888803584,,single_seed_no_seed_SD
+phystok_v2_ablation_seed26_20261019_r1,ABC,abc_c,20260826,10,Spatial,27403141,858714,320884470.9154159,9720632.561123729,19.33081116122984,11.31998844915039,,single_seed_no_seed_SD
+phystok_v2_ablation_seed26_20261019_r1,ABC,A,20260826,10,Spatial,27403141,858714,323968619.27460396,9666185.277651668,19.423487067283368,11.256582840912886,,single_seed_no_seed_SD

@@ -1,0 +1,12 @@
+No open-source license has been selected for project-authored code in this local
+release candidate. No license grant is made by the presence of candidate license
+texts under licenses/candidates/.
+
+The authors and relevant rights holders must approve ownership, the final license
+and public distribution before this candidate is published. See
+docs/LICENSE_REVIEW.md and PUBLIC_RELEASE_AUDIT.md.
+
+Third-party components remain subject to their own existing copyright and license
+notices. This notice does not replace or restrict rights already granted by those
+upstream licenses. Third-party datasets are not included, and a code license does
+not authorize redistribution of data.

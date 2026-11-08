@@ -1,0 +1,44 @@
+{
+  "seeds": [
+    20260826,
+    20260827,
+    20260828
+  ],
+  "folds": 10,
+  "internal_city_count": 50,
+  "external_city_count": 10,
+  "timezone": "Asia/Shanghai",
+  "covered_target_years": [
+    2023,
+    2024
+  ],
+  "future_target_years": [
+    2025
+  ],
+  "history_hours": 72,
+  "horizon_hours": 24,
+  "history_buffer": "December 2022; predictor context only",
+  "internal_same_local_year_required": true,
+  "external_year_membership": "target year only; December-31 issues forecasting January-1 are retained",
+  "city_roles_per_fold": {
+    "FIT": 40,
+    "VAL": 5,
+    "TEST": 5
+  },
+  "legal_exposures_per_physical_target": {
+    "Spatial": 1,
+    "Future": 8,
+    "Joint": 1,
+    "External-Spatial": 10,
+    "External-Joint": 10
+  },
+  "internal_region_strata": [
+    "North_China_Plain",
+    "Northeast",
+    "Sichuan_Basin",
+    "South_China",
+    "Yangtze_River_Delta_Extended"
+  ],
+  "external_strata": null,
+  "external_preprocessing": "reuse each original fold FIT transform; never fit on external records"
+}

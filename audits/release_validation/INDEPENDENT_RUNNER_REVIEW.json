@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "scope": "Independent targeted source/config/CLI and synthetic stale-cache counterexample review; no raw-data/GPU training reproduction.",
+  "checks": {
+    "optimization_sampler_scheduler_validation_checkpoint_resume_tail_preserved": true,
+    "frozen_main_scientific_field_benchmark_id": true,
+    "frozen_main_scientific_field_task": true,
+    "frozen_main_scientific_field_final_seeds": true,
+    "frozen_main_scientific_field_folds": true,
+    "frozen_main_scientific_field_models": true,
+    "frozen_main_scientific_field_precision": true,
+    "frozen_main_scientific_field_failure_policy": true,
+    "frozen_main_scientific_field_recipe_policy": true,
+    "frozen_control_recipe_delayed_xview": true,
+    "frozen_control_recipe_strict_late_fusion": true,
+    "frozen_control_recipe_plain_state_flatten": true,
+    "frozen_T8_ABC_recipe_phystok_small": true,
+    "frozen_T8_ABC_recipe_itransformer_scaled": true,
+    "frozen_T8_ABC_recipe_timexer_scaled": true,
+    "frozen_T8_ABC_recipe_abc_b": true,
+    "frozen_T8_ABC_recipe_abc_c": true,
+    "content_verification_on_fit_eval_persistence": true,
+    "qualified_final_only_evaluation": true,
+    "cached_cohort_binding_used": true,
+    "cached_evaluation_binding_used": true,
+    "persistence_in_main_aggregate": true,
+    "exclusive_prediction_publication": true,
+    "ablation_complete_resume_args": true,
+    "README_and_cli_help_execution": true
+  },
+  "original_frozen_recipe_reference": "paper/icde2027/benchmark_v2_implementation_20261017/execution_20261017/configs/frozen_recipe.json",
+  "resolved_findings": [
+    "Ablation resume path now carries SHA and complete dict",
+    "Cached cohort revalidated against exact current manifests",
+    "Cached evaluations bound to training identity and selected checkpoint",
+    "Persistence identity and all five scenes included in main aggregate",
+    "Rebuilt feature/target/task content bound and rehashed before formal entrypoints",
+    "Only qualified final fits accepted for evaluation",
+    "Prediction artifacts exclusively published using unique temporary file and atomic link"
+  ],
+  "synthetic_counterexample_tests": {
+    "file": "tests/test_public_runner_guards.py",
+    "passed": 8,
+    "failed": 0,
+    "clean_environment": true,
+    "tests": [
+      "valid current cached result",
+      "different checkpoint with intact local hashes",
+      "wrong scenario",
+      "old transform",
+      "different data contract",
+      "new same-identity attempt path against old cohort",
+      "modified training receipt",
+      "resource-capped run"
+    ]
+  },
+  "cli_checks": [
+    {
+      "command": [
+        "scripts/train.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "usage": "usage: train.py [-h] [--config CONFIG] --data-root DATA_ROOT --data-contract"
+    },
+    {
+      "command": [
+        "scripts/evaluate.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "usage": "usage: evaluate.py [-h] [--config CONFIG] --data-root DATA_ROOT"
+    },
+    {
+      "command": [
+        "scripts/run_benchmark.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "usage": "usage: run_benchmark.py [-h] [--config CONFIG] [--output OUTPUT]"
+    },
+    {
+      "command": [
+        "scripts/run_ablation.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "usage": "usage: run_ablation.py [-h] [--variant VARIANT]"
+    },
+    {
+      "command": [
+        "scripts/prepare_data.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "usage": "usage: prepare_data.py [-h] --data-root DATA_ROOT"
+    },
+    {
+      "command": [
+        "scripts/run_benchmark.py"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "training_runs": 210,
+        "prediction_exposures": 1050,
+        "persistence_populations": 5
+      }
+    },
+    {
+      "command": [
+        "scripts/run_ablation.py",
+        "plan"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "formal_new_fits": 140
+      }
+    }
+  ],
+  "reviewed_file_sha256": {
+    "phystok/training/app.py": "6b6a38a70be535019e0c868fc44861f44f2bfef76f0d02eb5f3ec3731071d54b",
+    "phystok/training/engine.py": "94ecf350f09c9ffebe8bf58e0319c4ecbcc8eb870fe5deb12bd8910596389d59",
+    "phystok/training/checkpoint.py": "d32861034e48854fb968f7af1837fb97a29e002d8d84e0fd09eff780f25f5727",
+    "phystok/training/budget.py": "6d03ffc3d784fb938af6155e16c5fb0ba0e5390b37436bc85dd47bd72ca1e7bc",
+    "scripts/train.py": "0eaf72ab8b83a7a75684b859d2890151d6c2595570d348110bb0ae03a6c1907d",
+    "scripts/evaluate.py": "a01f67bfb643af0b60e86f6b047f245bd17926824659322cb80496e5d0dda0e5",
+    "scripts/run_benchmark.py": "036bb1afd9ada035e6e39f79af365fddf5310f0a6591ddb5375c16b1100684c3",
+    "scripts/run_ablation.py": "3fb0438cd4dc08a66c1edf43ff882fd793c20973991c0080fba1b269def77c02",
+    "phystok/data/rebuild.py": "74a26064d5fcddbfe5704a8cdd9447a26ac24af6c7a736f98a3e295684ad9dc7",
+    "tests/test_public_runner_guards.py": "b7b3b4838e0cd6c865392af6b0dd35f874e940d696593e9f5f427fb0ca16ef0e"
+  },
+  "limitations": [
+    "End-to-end raw-data reconstruction and 210 GPU fits were not run in this code-release audit.",
+    "TimeXer and XLinear legally restricted cores require authorized local acquisition; their omitted public versions cannot run until installed.",
+    "README commands checked against actual help and planning behavior; dataset-dependent execution is covered by source review and synthetic lower-level tests rather than a real-data run."
+  ]
+}

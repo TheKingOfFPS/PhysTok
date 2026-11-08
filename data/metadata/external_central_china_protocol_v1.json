@@ -1,0 +1,240 @@
+{
+  "protocol_id": "central_china_external_holdout_v1",
+  "status": "FROZEN",
+  "frozen_at_utc": "2026-09-12T12:23:58+00:00",
+  "scientific_role": {
+    "name": "sixth-region external geographic validation",
+    "purpose": "Test whether conclusions developed on the frozen 50-city, five-region benchmark transfer to an entirely withheld, geographically contiguous Central-China region.",
+    "prospectively_reserved_region": true,
+    "development_benchmark_regions": 5,
+    "development_benchmark_cities": 50,
+    "external_region": "Central_China_External",
+    "external_cities": 10,
+    "not_loro": true,
+    "not_used_for_model_development": true,
+    "not_used_for_hyperparameter_selection": true,
+    "not_used_for_checkpoint_selection": true,
+    "not_used_for_ood_analysis_69_73b": true
+  },
+  "external_city_roster": [
+    {
+      "region": "Central_China_External",
+      "priority": 1,
+      "province": "Hubei",
+      "city": "Wuhan",
+      "city_zh": "武汉",
+      "latitude": 30.5928,
+      "longitude": 114.3055,
+      "coverage_role": "regional_core"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 2,
+      "province": "Hubei",
+      "city": "Xiangyang",
+      "city_zh": "襄阳",
+      "latitude": 32.0089,
+      "longitude": 112.1224,
+      "coverage_role": "northwest_boundary"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 3,
+      "province": "Hubei",
+      "city": "Yichang",
+      "city_zh": "宜昌",
+      "latitude": 30.6919,
+      "longitude": 111.2865,
+      "coverage_role": "western_transition"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 4,
+      "province": "Hubei",
+      "city": "Jingzhou",
+      "city_zh": "荆州",
+      "latitude": 30.3348,
+      "longitude": 112.2407,
+      "coverage_role": "jianghan_plain_southwest"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 5,
+      "province": "Hunan",
+      "city": "Yueyang",
+      "city_zh": "岳阳",
+      "latitude": 29.3571,
+      "longitude": 113.1292,
+      "coverage_role": "north_hunan_yangtze_transition"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 6,
+      "province": "Hunan",
+      "city": "Changsha",
+      "city_zh": "长沙",
+      "latitude": 28.2282,
+      "longitude": 112.9388,
+      "coverage_role": "regional_core"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 7,
+      "province": "Hunan",
+      "city": "Hengyang",
+      "city_zh": "衡阳",
+      "latitude": 26.8932,
+      "longitude": 112.5719,
+      "coverage_role": "south_hunan"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 8,
+      "province": "Jiangxi",
+      "city": "Jiujiang",
+      "city_zh": "九江",
+      "latitude": 29.7051,
+      "longitude": 116.0019,
+      "coverage_role": "north_jiangxi_yangtze_transition"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 9,
+      "province": "Jiangxi",
+      "city": "Nanchang",
+      "city_zh": "南昌",
+      "latitude": 28.682,
+      "longitude": 115.8579,
+      "coverage_role": "regional_core"
+    },
+    {
+      "region": "Central_China_External",
+      "priority": 10,
+      "province": "Jiangxi",
+      "city": "Ganzhou",
+      "city_zh": "赣州",
+      "latitude": 25.8311,
+      "longitude": 114.935,
+      "coverage_role": "southern_boundary"
+    }
+  ],
+  "time_protocol": {
+    "input_support_start_local": "2022-12-01 00:00:00",
+    "formal_target_start_local": "2023-01-01 00:00:00",
+    "formal_target_end_local": "2025-12-31 23:00:00",
+    "lookback_hours": 72,
+    "forecast_horizon_hours": 24,
+    "covered_years": [
+      2023,
+      2024
+    ],
+    "future_years": [
+      2025
+    ],
+    "timezone": "Asia/Shanghai",
+    "reason_for_2022_12_support": "Provide complete historical context for early-2023 targets; December 2022 is input support only, not an evaluation year."
+  },
+  "scenarios": {
+    "external_spatial_2023_2024": {
+      "target_local_years": [
+        2023,
+        2024
+      ],
+      "meaning": "Entirely unseen region during the same covered calendar period used for model development."
+    },
+    "external_joint_2025": {
+      "target_local_years": [
+        2025
+      ],
+      "meaning": "Entirely unseen region plus future-year shift."
+    },
+    "external_temporal": {
+      "defined": false,
+      "reason": "The external region is never seen during training, so a seen-region/future-time external condition does not exist."
+    }
+  },
+  "data_boundary": {
+    "air_quality": "Same CNEMC/QuotSoft source, station QC policy, city aggregation, target validity rules, and units as the frozen 50-city benchmark.",
+    "meteorology": "Same ERA5 variables, pressure levels, physical derivations, hourly alignment, and city extraction policy as the frozen benchmark.",
+    "feature_schema": "Exactly the already-frozen observed-sequence feature schema; no feature may be added or modified using external-region results.",
+    "external_data_may_not_fit_preprocessing": true,
+    "external_data_may_not_fit_target_normalization": true
+  },
+  "checkpoint_and_preprocessing": {
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "checkpoint_rule": "For every trainable model and outer fold k, use the already-frozen fold-k best checkpoint selected solely by the original outer VALIDATION cities under 2023-2024 data.",
+    "retraining_for_external_test": false,
+    "checkpoint_reselection_for_external_test": false,
+    "fold_specific_input_transform": "Use the original fold-k FIT-only imputation median, transform center, and transform scale. External rows contribute zero statistics.",
+    "fold_specific_target_transform": "Use the original fold-k FIT-only target mean/std for model-output de-standardization. External target values contribute zero statistics."
+  },
+  "models": {
+    "trainable_models": [
+      "DLinear",
+      "Informer",
+      "PatchTST",
+      "iTransformer",
+      "TimeXer",
+      "XLinear",
+      "Bare Strong VTT",
+      "D5"
+    ],
+    "nontrainable_reference": [
+      "Persistence"
+    ],
+    "d5_deployment_auxiliary_head": "removed / unused at inference",
+    "hyperparameters": "exactly frozen from the formal benchmark"
+  },
+  "estimands": {
+    "trained_model_exposure_unit": "one already-trained fold-specific single model x one external physical task row",
+    "folds_per_physical_row": 10,
+    "ensemble_averaging_before_metrics": false,
+    "primary_pooling": "Pool all single-model fold exposures within scenario for global risk; do not average the 10 fold predictions into an ensemble forecast.",
+    "per_city_pooling": "Pool the 10 fold-specific single-model exposures within each external city.",
+    "persistence_handling": "Evaluate persistence once per physical task row; do not manufacture 10 duplicated fold exposures for uncertainty."
+  },
+  "metrics": {
+    "main": [
+      "RMSE",
+      "MAE",
+      "R2",
+      "bias"
+    ],
+    "diagnostic": [
+      "NRMSE_sigma"
+    ],
+    "reporting": [
+      "pooled global scenario metrics",
+      "per-city metrics",
+      "per-fold metrics for trained models",
+      "model rank",
+      "city-level win counts"
+    ],
+    "new_composite_robustness_score": false
+  },
+  "external_replication_questions": [
+    "Q1 ranking external validity: does the architecture ordering from the five-region benchmark persist in the sixth withheld region?",
+    "Q2 future degradation replication: from External-Spatial 2023-2024 to External-Joint 2025, does normalized difficulty increase?",
+    "Q3 architecture-response reproducibility: do the strongest benchmark architectures retain their relative advantage under genuine external geography?"
+  ],
+  "analysis_stopping_rule": {
+    "role": "replication, not new discovery",
+    "do_not_reopen_ood_descriptor_search": true,
+    "do_not_build_new_shift_score": true,
+    "do_not_select_cities_by_model_results": true,
+    "do_not_replace_city_after_inference": true,
+    "data_quality_failure_policy": "If a frozen city fails a pre-model source-availability/QC gate, stop. Any replacement requires a documented protocol v2 created before running any model inference on external data."
+  },
+  "public_rebuild_note": "Frozen protocol rules only. Historical internal audit receipts and observations are not distributed; users reconstruct and audit their own inputs."
+}

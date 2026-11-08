@@ -1,0 +1,335 @@
+{
+  "approval": {
+    "budget_status": "PROPOSED_NOT_CONVERGENCE_CERTIFIED",
+    "status": "NOT_APPROVED"
+  },
+  "benchmark_id": "phystok_v2_frozen_recipe_20261017_r1",
+  "failure_policy": {
+    "automatic_retry": false,
+    "new_attempt_on_incomplete_resume": true,
+    "retry_test_quality": false
+  },
+  "final_seeds": [
+    20260826,
+    20260827,
+    20260828
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "hpo_seed": 20261017,
+  "models": {
+    "dlinear": {
+      "adapter_version": "dlinear_scalar24_v2",
+      "batch_size": 8192,
+      "budget": {
+        "extension_factor": 2.0,
+        "initial_passes": 430.0,
+        "initial_updates": 36000,
+        "lr_factor": 0.5,
+        "lr_patience_checks": 2,
+        "max_nonfinite_batches": 0,
+        "max_passes": 860.0,
+        "max_skipped_updates": 8,
+        "max_updates": 72000,
+        "min_lr": 1e-06,
+        "min_passes": 310.0,
+        "min_updates": 26000,
+        "patience_checks": 6,
+        "recent_improvement_checks": 3,
+        "recovery_checks": 2,
+        "relative_min_delta": 0.0001,
+        "required_lr_reductions": 1,
+        "val_every_passes": 24.0,
+        "val_every_updates": 2000
+      },
+      "candidates": [
+        {
+          "d_model": 8,
+          "learning_rate": 0.0003,
+          "weight_decay": 0.0001
+        }
+      ],
+      "eval_batch_size": 512,
+      "gradient_clip": 1.0,
+      "optimizer": "Adam"
+    },
+    "informer": {
+      "adapter_version": "informer_scalar24_v2",
+      "batch_size": 512,
+      "budget": {
+        "extension_factor": 2.0,
+        "initial_passes": 40.0,
+        "initial_updates": 54000,
+        "lr_factor": 0.5,
+        "lr_patience_checks": 2,
+        "max_nonfinite_batches": 0,
+        "max_passes": 80.0,
+        "max_skipped_updates": 8,
+        "max_updates": 108000,
+        "min_lr": 1e-06,
+        "min_passes": 26.0,
+        "min_updates": 36000,
+        "patience_checks": 6,
+        "recent_improvement_checks": 3,
+        "recovery_checks": 2,
+        "relative_min_delta": 0.0001,
+        "required_lr_reductions": 1,
+        "val_every_passes": 0.5,
+        "val_every_updates": 500
+      },
+      "candidates": [
+        {
+          "d_model": 256,
+          "learning_rate": 0.0003,
+          "weight_decay": 0.0001
+        }
+      ],
+      "eval_batch_size": 512,
+      "gradient_clip": 1.0,
+      "optimizer": "AdamW"
+    },
+    "itransformer": {
+      "adapter_version": "itransformer_scalar24_v2",
+      "batch_size": 128,
+      "budget": {
+        "extension_factor": 2.0,
+        "initial_passes": 26.0,
+        "initial_updates": 144000,
+        "lr_factor": 0.5,
+        "lr_patience_checks": 2,
+        "max_nonfinite_batches": 0,
+        "max_passes": 54.0,
+        "max_skipped_updates": 8,
+        "max_updates": 288000,
+        "min_lr": 1e-06,
+        "min_passes": 6.0,
+        "min_updates": 36000,
+        "patience_checks": 6,
+        "recent_improvement_checks": 3,
+        "recovery_checks": 2,
+        "relative_min_delta": 0.0001,
+        "required_lr_reductions": 1,
+        "val_every_passes": 0.5,
+        "val_every_updates": 1000
+      },
+      "candidates": [
+        {
+          "d_model": 256,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001
+        }
+      ],
+      "eval_batch_size": 128,
+      "gradient_clip": 1.0,
+      "optimizer": "AdamW"
+    },
+    "patchtst": {
+      "adapter_version": "patchtst_scalar24_v2",
+      "batch_size": 128,
+      "budget": {
+        "extension_factor": 2.0,
+        "initial_passes": 26.0,
+        "initial_updates": 144000,
+        "lr_factor": 0.5,
+        "lr_patience_checks": 2,
+        "max_nonfinite_batches": 0,
+        "max_passes": 54.0,
+        "max_skipped_updates": 8,
+        "max_updates": 288000,
+        "min_lr": 1e-06,
+        "min_passes": 6.0,
+        "min_updates": 36000,
+        "patience_checks": 6,
+        "recent_improvement_checks": 3,
+        "recovery_checks": 2,
+        "relative_min_delta": 0.0001,
+        "required_lr_reductions": 1,
+        "val_every_passes": 0.5,
+        "val_every_updates": 1000
+      },
+      "candidates": [
+        {
+          "d_model": 256,
+          "learning_rate": 0.0003,
+          "weight_decay": 0.0001
+        }
+      ],
+      "eval_batch_size": 128,
+      "gradient_clip": 1.0,
+      "optimizer": "AdamW"
+    },
+    "phystok": {
+      "adapter_version": "phystok_scalar24_v2",
+      "batch_size": 512,
+      "budget": {
+        "extension_factor": 2.0,
+        "initial_passes": 40.0,
+        "initial_updates": 54000,
+        "lr_factor": 0.5,
+        "lr_patience_checks": 2,
+        "max_nonfinite_batches": 0,
+        "max_passes": 80.0,
+        "max_skipped_updates": 8,
+        "max_updates": 108000,
+        "min_lr": 1e-06,
+        "min_passes": 26.0,
+        "min_updates": 36000,
+        "patience_checks": 6,
+        "recent_improvement_checks": 3,
+        "recovery_checks": 2,
+        "relative_min_delta": 0.0001,
+        "required_lr_reductions": 1,
+        "val_every_passes": 0.5,
+        "val_every_updates": 500
+      },
+      "candidates": [
+        {
+          "d_model": 512,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001
+        }
+      ],
+      "eval_batch_size": 512,
+      "gradient_clip": 1.0,
+      "optimizer": "AdamW"
+    },
+    "timexer": {
+      "adapter_version": "timexer_scalar24_v2",
+      "batch_size": 128,
+      "budget": {
+        "extension_factor": 2.0,
+        "initial_passes": 26.0,
+        "initial_updates": 144000,
+        "lr_factor": 0.5,
+        "lr_patience_checks": 2,
+        "max_nonfinite_batches": 0,
+        "max_passes": 54.0,
+        "max_skipped_updates": 8,
+        "max_updates": 288000,
+        "min_lr": 1e-06,
+        "min_passes": 6.0,
+        "min_updates": 36000,
+        "patience_checks": 6,
+        "recent_improvement_checks": 3,
+        "recovery_checks": 2,
+        "relative_min_delta": 0.0001,
+        "required_lr_reductions": 1,
+        "val_every_passes": 0.5,
+        "val_every_updates": 1000
+      },
+      "candidates": [
+        {
+          "d_model": 512,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001
+        }
+      ],
+      "eval_batch_size": 128,
+      "gradient_clip": 1.0,
+      "optimizer": "AdamW"
+    },
+    "xlinear": {
+      "adapter_version": "xlinear_scalar24_v2",
+      "batch_size": 128,
+      "budget": {
+        "extension_factor": 2.0,
+        "initial_passes": 26.0,
+        "initial_updates": 144000,
+        "lr_factor": 0.5,
+        "lr_patience_checks": 2,
+        "max_nonfinite_batches": 0,
+        "max_passes": 54.0,
+        "max_skipped_updates": 8,
+        "max_updates": 288000,
+        "min_lr": 1e-06,
+        "min_passes": 6.0,
+        "min_updates": 36000,
+        "patience_checks": 6,
+        "recent_improvement_checks": 3,
+        "recovery_checks": 2,
+        "relative_min_delta": 0.0001,
+        "required_lr_reductions": 1,
+        "val_every_passes": 0.5,
+        "val_every_updates": 1000
+      },
+      "candidates": [
+        {
+          "d_model": 512,
+          "learning_rate": 0.0003,
+          "weight_decay": 0.0001
+        }
+      ],
+      "eval_batch_size": 128,
+      "gradient_clip": 1.0,
+      "optimizer": "AdamW"
+    }
+  },
+  "pilot": {
+    "fit_samples": 16384,
+    "fold": 0,
+    "max_seconds": 600,
+    "seed": 20261017,
+    "updates": 20,
+    "val_samples": 2048,
+    "validation_every_updates": 5
+  },
+  "precision": {
+    "cudnn_benchmark": false,
+    "deterministic": true,
+    "dtype": "float32",
+    "eval_rng_seed": 20261017,
+    "matmul_precision": "highest",
+    "tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "fp16_reduced_precision_reduction": false,
+    "bf16_reduced_precision_reduction": false
+  },
+  "schema_version": 2,
+  "task": {
+    "evaluation_year": 2025,
+    "horizon": 24,
+    "information_policy": "native_inputs_disclosed_not_schema_causal_control",
+    "lookback": 72,
+    "output_length": 1,
+    "roles": {
+      "FIT": 40,
+      "TEST": 5,
+      "VAL": 5
+    },
+    "scenarios": [
+      "Spatial",
+      "Future",
+      "Joint",
+      "External-Spatial",
+      "External-Joint"
+    ],
+    "selection": "Fold0_developed_frozen_recipe_non_nested",
+    "train_years": [
+      2023,
+      2024
+    ]
+  },
+  "protocol_mode": "frozen_recipe",
+  "recipe_policy": {
+    "development_fold": 0,
+    "nested_selection_independence": false,
+    "historical_test_access_disclosed": true,
+    "candidate_selection_after_freeze": false,
+    "phase_order": [
+      "baselines_180",
+      "phystok_30",
+      "frozen_evaluation"
+    ],
+    "qualification_status": "PENDING_REAL_FIT_VAL_REVIEW"
+  }
+}

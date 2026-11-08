@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "clean_cpu_environment": true,
+  "torch": "2.7.1+cpu",
+  "python": "3.11.14",
+  "scope": "Temporary local-only use of existing pinned upstream reference; hash-checked installer and scalar/capacity forwards exercised. No restricted sources written in public candidate. This test does not establish redistribution permission.",
+  "installation": [
+    {
+      "status": "PASS",
+      "model": "timexer",
+      "commit": "76011909357972bd55a27adba2e1be994d81b327",
+      "files": 4,
+      "installed_path": "phystok/models/vendor/timexer",
+      "redistribution_permission": "UNCONFIRMED: do not commit or redistribute this installation"
+    },
+    {
+      "status": "PASS",
+      "model": "xlinear",
+      "commit": "af500c5478ef2a69ad36d04ffcdfe04aae4483e2",
+      "files": 1,
+      "installed_path": "phystok/models/vendor/xlinear",
+      "redistribution_permission": "UNCONFIRMED: do not commit or redistribute this installation"
+    }
+  ],
+  "models": [
+    {
+      "model": "timexer",
+      "parameters": 8461313,
+      "scalar_forward_finite": true
+    },
+    {
+      "model": "xlinear",
+      "parameters": 574993,
+      "scalar_forward_finite": true
+    },
+    {
+      "model": "timexer_scaled",
+      "parameters": 27316513,
+      "scalar_forward_finite": true
+    }
+  ],
+  "restricted_source_absent_from_candidate": true,
+  "cuda_initialized": false
+}

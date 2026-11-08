@@ -1,0 +1,65 @@
+{
+  "full": {
+    "model": "phystok",
+    "d_model": 512,
+    "parameters": 27403141
+  },
+  "variants": {
+    "delayed_xview": {
+      "model": "phystok",
+      "model_variant": "delayed_xview",
+      "group": "representation",
+      "arm": "A",
+      "reference_parameters": 27403141
+    },
+    "strict_late_fusion": {
+      "model": "phystok",
+      "model_variant": "strict_late_fusion",
+      "group": "representation",
+      "arm": "A",
+      "reference_parameters": 27409183
+    },
+    "plain_state_flatten": {
+      "model": "phystok",
+      "model_variant": "plain_state_flatten",
+      "group": "representation",
+      "arm": "A",
+      "reference_parameters": 27449733
+    },
+    "phystok_small": {
+      "model": "phystok",
+      "group": "T8",
+      "arm": "A",
+      "reference_parameters": 7021701,
+      "model_variant": "phystok_small"
+    },
+    "itransformer_scaled": {
+      "model": "itransformer",
+      "group": "T8",
+      "arm": "A",
+      "reference_parameters": 27284497,
+      "model_variant": "itransformer_scaled"
+    },
+    "timexer_scaled": {
+      "model": "timexer",
+      "group": "T8",
+      "arm": "A",
+      "reference_parameters": 27316513,
+      "model_variant": "timexer_scaled"
+    },
+    "abc_b": {
+      "model": "phystok",
+      "group": "ABC",
+      "arm": "B",
+      "reference_parameters": 27403141,
+      "model_variant": null
+    },
+    "abc_c": {
+      "model": "phystok",
+      "group": "ABC",
+      "arm": "C",
+      "reference_parameters": 27403141,
+      "model_variant": null
+    }
+  }
+}

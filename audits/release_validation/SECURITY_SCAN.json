@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "actual Git index",
+  "files": 199,
+  "remote_count": 0,
+  "findings": [],
+  "limitations": [
+    "Pattern scanning is supplemented by manual source, licensing and aggregate-data review. It does not grant publication rights."
+  ]
+}

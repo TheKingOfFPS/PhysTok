@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "data_unit_tests": 7,
+  "preprocessing_network_requests_sent": 0,
+  "data_sources_verified_on": "2026-11-08",
+  "plan_only_checks": {
+    "era5_acquisition_jobs_halo3.csv": {
+      "jobs": 555,
+      "expected": 555,
+      "scientific_request_columns_match_frozen": true
+    },
+    "era5_external_central_china_acquisition_jobs_halo3.csv": {
+      "jobs": 111,
+      "expected": 111,
+      "scientific_request_columns_match_frozen": true
+    }
+  },
+  "full_raw_rebuild_executed": false,
+  "full_benchmark_training_executed": false,
+  "limitations": [
+    "No raw or processed data distributed. Full raw-data reconstruction was not run in this release. Exact source snapshots and registry must be obtained lawfully by each user."
+  ],
+  "actual_input_binding_tests": "PASS: same-size tampering, membership change, transform metadata mutation and missing content manifest rejected",
+  "same_path_metadata_rebuild_test": "PASS: new CityData metadata keyed by actual task Parquet SHA",
+  "hash_cache_policy": "Strict byte hashing per formal verification; no stat-only hash reuse"
+}
