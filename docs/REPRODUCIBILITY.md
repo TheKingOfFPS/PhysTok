@@ -49,7 +49,7 @@ python scripts/smoke.py
 python scripts/evaluate.py --synthetic-smoke
 python scripts/reproduce_tables.py --mode verify
 python scripts/reproduce_tables.py --mode bootstrap-all
-python scripts/audit_public_release.py
+python scripts/audit_public_release.py --allow-remote-url https://github.com/TheKingOfFPS/PhysTok.git
 ```
 
 Exact check totals and runtime versions are recorded in `audits/release_validation/`. Source-equivalence checks against the frozen original were performed separately from clean-environment functional checks, and their runtimes are stated. Neither is described as a new scientific experiment.

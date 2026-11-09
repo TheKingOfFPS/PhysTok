@@ -3,7 +3,7 @@
 import argparse,csv,hashlib,io,json,re,subprocess
 from pathlib import Path
 
-def inspect(root,commit=None):
+def inspect(root,commit=None,allowed_remote_urls=()):
     root=Path(root).resolve()
     command=['git','ls-tree','-rz','--name-only',commit] if commit else ['git','ls-files','-z']
     names=subprocess.check_output(command,cwd=root).decode().split('\0')
@@ -45,7 +45,10 @@ def inspect(root,commit=None):
                 issues.append('individual-observation/prediction CSV columns')
         if issues:findings.append({'path':name,'issues':issues})
     remotes=subprocess.check_output(['git','remote'],cwd=root,text=True).splitlines()
-    if remotes:findings.append({'path':'.git/config','issues':['remote configured; local-only candidate expected']})
+    for remote in remotes:
+        url=subprocess.check_output(['git','remote','get-url',remote],cwd=root,text=True).strip()
+        if url not in set(allowed_remote_urls):
+            findings.append({'path':'.git/config','issues':['remote is not in the explicit authorized URL list']})
     return {'status':'PASS' if not findings else 'FAIL','scope':'actual Git '+('commit '+commit if commit else 'index'),
             'files':len(names),'bytes':sum(x['bytes'] for x in inventory),'remote_count':len(remotes),
             'findings':findings,'inventory':inventory,
@@ -53,7 +56,9 @@ def inspect(root,commit=None):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',default='.')
-    p.add_argument('--commit');p.add_argument('--output');a=p.parse_args();result=inspect(a.root,a.commit)
+    p.add_argument('--commit');p.add_argument('--output')
+    p.add_argument('--allow-remote-url',action='append',default=[],help='Explicit authorized remote URL; defaults to no remote allowed')
+    a=p.parse_args();result=inspect(a.root,a.commit,a.allow_remote_url)
     if a.output:Path(a.output).write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k!='inventory'},indent=2))
     raise SystemExit(0 if result['status']=='PASS' else 1)

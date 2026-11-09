@@ -1,8 +1,8 @@
 # PhysTok
 
-Research code for **Population-Frozen Evaluation and Schema-Organized Tokens for City-Level Forecasting** (manuscript, version November 8, 2026).
+Research code for **Population-Frozen Evaluation and Schema-Organized Tokens for City-Level Forecasting** (manuscript; author and repository-link revision, November 9, 2026).
 
-This local release candidate accompanies the authors' verified V11 manuscript. It is not a claim of conference acceptance. A publication DOI and a public paper URL have not been assigned in this repository. The manuscript PDF is not distributed here.
+This private staging repository accompanies the authors' verified PhysTok manuscript. V12 updates the author layout and repository link; its scientific content is unchanged from V11. It is not a claim of conference acceptance. A publication DOI and a public paper URL have not been assigned in this repository. The manuscript PDF is not distributed here.
 
 ## Overview
 
@@ -118,4 +118,4 @@ Use `CITATION.cff` or cite the manuscript title and authors. No acceptance, DOI,
 
 ## License and release status
 
-This is a **local candidate pending author approval**. A license for project-authored code has not been selected. See `LICENSE`, [ownership and license choices](docs/LICENSE_REVIEW.md), and [third-party licenses](docs/THIRD_PARTY_LICENSES.md). Candidate MIT and Apache-2.0 texts are proposals, not grants. Any eventual code license does not grant permission to redistribute CNEMC, ERA5 or other data. No GitHub repository has been created or pushed by this preparation workflow.
+This is a **local candidate pending author approval**. A license for project-authored code has not been selected. See `LICENSE`, [ownership and license choices](docs/LICENSE_REVIEW.md), and [third-party licenses](docs/THIRD_PARTY_LICENSES.md). Candidate MIT and Apache-2.0 texts are proposals, not grants. Any eventual code license does not grant permission to redistribute CNEMC, ERA5 or other data. The repository is currently private at https://github.com/TheKingOfFPS/PhysTok. Public release and the final license remain subject to author approval. See [private staging status](docs/PRIVATE_REPOSITORY_STATUS.md); the November 8 audit records the earlier local-only preparation.

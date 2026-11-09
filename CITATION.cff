@@ -3,6 +3,7 @@ message: "Please cite the PhysTok manuscript if you use this research code."
 type: software
 title: "PhysTok: Population-Frozen Evaluation and Schema-Organized Tokens for City-Level Forecasting"
 version: 0.1.0
+repository-code: "https://github.com/TheKingOfFPS/PhysTok"
 authors:
   - family-names: Lu
     given-names: Yuxiang
